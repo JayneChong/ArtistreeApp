@@ -14,8 +14,8 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="card card-nav-tabs card-plain">
-            <div class="card-header card-header-success">
+        <div class=" card card-nav-tabs card-plain">
+            <div class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg card-header card-header-success">
                 <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" data-tabs="tabs">
@@ -38,11 +38,15 @@
 
     <center>
 
+        <h1 class="title" style="color: #2fd889"> ARTISTREE </h1>
+
+
+        <br><br>
         <div class="main main-raised"> 
             <div class="container">
                 <div class="title"> <h2><span id="datetime"></span></h2> </div>
 
-                <!-- Active Project tabs -->
+<!-- Active Project tabs -->
                 <h2> ACTIVE PROJECTS </h2>
 
                 <div class="card card-nav-tabs">
@@ -82,6 +86,88 @@
 
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-info " data-toggle="modal" data-target="#project1">
+                                        Project 1
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-rose " data-toggle="modal" data-target="#project2">
+                                        Project 2
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-pane" id="art1">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-info " data-toggle="modal" data-target="#project1">
+                                        Project 1
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="art2">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-rose " data-toggle="modal" data-target="#project2">
+                                        Project 2
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+<!-- Completed Project tabs -->
+                <h2> COMPLETED PROJECTS </h2>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-default">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#c-art" data-toggle="tab">
+                                           ALL
+                                       </a>
+                                   </li>
+
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="#c-art1" data-toggle="tab">
+                                        ART 1
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#c-art2" data-toggle="tab">
+                                        ART 2
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Active Projects List -->
+                <div class="card-body ">
+                    <div class="tab-content text-center">
+                        <div class="tab-pane active" id="c-art">
+
+
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
                                     <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project1">
                                         Project 1
                                     </button>
@@ -98,7 +184,7 @@
 
                         </div>
 
-                        <div class="tab-pane" id="art1">
+                        <div class="tab-pane" id="c-art1">
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
                                     <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project1">
@@ -108,7 +194,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="art2">
+                        <div class="tab-pane" id="c-art2">
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
                                     <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project2">

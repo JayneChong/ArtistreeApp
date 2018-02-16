@@ -45,7 +45,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus {
@@ -6265,7 +6265,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .fixed-top {
   position: fixed;
-  top: 0;
+  top: 20px;
   right: 0;
   left: 0;
   z-index: 1030;
