@@ -7,7 +7,7 @@
  
  
 .grid-view body {
-  background: #333;
+  background: #ffffff;
 }
  
 .grid-view div {
@@ -19,19 +19,21 @@
   list-style-type: none;
 }
  
-.grid-view li img {
+.grid-view li img h5 span{
   float: left;
   margin: 5px;
-  border: 5px solid #333;
+  border: 5px solid transparent;
  -moz-transition: all 0.2s ease-in-out;
  -webkit-transition: all 0.2s ease-in-out;
  transition: all 0.2s ease-in-out;
 }
 
-.grid-viewli img:hover {
-border: 5px solid #F15123;
+
+.grid-view li img:hover {
+border: 5px solid #ffffff;
 }
 
+ 
 
 
 /*-----------LOGIN-----------*/
