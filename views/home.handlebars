@@ -4,35 +4,191 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTISTREE2</title>
+    <title>ARTISTREE</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materials.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-bottom navbar-transparency" style="height:30px;">
-        <div class="container-fluid"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/home">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/add_proj">Add</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/collection">Collection</a></li>
-                    </li>
-                </ul>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="card card-nav-tabs card-plain">
+            <div class="card-header card-header-success">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/home" data-toggle="tab">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#updates" data-toggle="/add">Add</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#history" data-toggle="/collection">collection</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </nav> <br>
+    <!-- Navigation Bar END -->
 
     <center>
-        
 
-    </center>
+        <div class="main main-raised"> 
+            <div class="container">
+                <div class="title"> <h2><span id="datetime"></span></h2> </div>
+
+                <!-- Active Project tabs -->
+                <h2> ACTIVE PROJECTS </h2>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#art" data-toggle="tab">
+                                           ALL
+                                       </a>
+                                   </li>
+
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="#art1" data-toggle="tab">
+                                        ART 1
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#art2" data-toggle="tab">
+                                        ART 2
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Active Projects List -->
+                <div class="card-body ">
+                    <div class="tab-content text-center">
+                        <div class="tab-pane active" id="art">
+
+
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project1">
+                                        Project 1
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project2">
+                                        Project 2
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-pane" id="art1">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project1">
+                                        Project 1
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="art2">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project2">
+                                        Project 2
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/components.js"></script>
+        </div>
+    </div>  
+</div>
+</center>
+
+
+
+<!-- Floating Modal -->
+<div class="modal fade" id="project1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Project X - Film for Xavier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="material-icons">x</i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3> Location scouting </h3>
+                <h4> January 1, 2018 </h4>
+                <p> Checked out some abandoned places in Mexico. Saw potential locations for shoot next week. *Insert photo* </p> 
+                <hr>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-success">Add Entries</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="project2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Project B - Be Beethoven</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="material-icons">x</i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3> 2 Hour Practice </h3>
+                <h4> January 1, 2018 </h4>
+                <p> Practiced for two hours today. Worked on all major chords. Feeling pretty good! *Insert audio* </p> 
+                <hr>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-success">Add Entries</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  End Modal -->
+
+<!--- date/time --> 
+<script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/components.js"></script>
 </body>
 
 </html>
