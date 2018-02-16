@@ -15,7 +15,7 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var home = require('./routes/home');
 var collection = require('./routes/collection');
-var add = require('./routes/collection');
+var add = require('./routes/add');
 
 
 var app = express();
