@@ -7,11 +7,13 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var nodemailer = require('nodemailer');
 
 
 // ROUTES ---- var user = require('./routes/user');
 var login = require('./routes/login');
-var register = require('./routes/register')
+var register = require('./routes/register');
+var home = require('./routes/home');
 
 
 var app = express();
@@ -40,6 +42,7 @@ if ('development' == app.get('env')) {
 // GET ROUTES ---- app.get('/users', user.list);
 app.get('/', login.view);
 app.get('/register', register.view);
+app.get('/home', home.view)
 
 
 

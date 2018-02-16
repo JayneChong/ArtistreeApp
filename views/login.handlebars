@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTISTREE2</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Fixed-navbar-starting-with-transparency.css">
-    <link rel="stylesheet" href="css/Central-Aligned-Clear-Nav.css">
-    <link rel="stylesheet" href="css/Login-Form.css">
-    <link rel="stylesheet" href="css/Registration-Form.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-    <div class="justify-content-center align-items-center align-content-center flex-wrap m-auto login-clean" style="height:auto;width:auto;">
+<body class="loginBody">
+    <center>
+     <div class="flex-wrap m-auto login-clean" style="height:auto;width:auto;">
         <form method="post">
             <h2 class="sr-only">Login</h2>
             <h2 class="text-center" style="padding-bottom:-1px;margin-bottom:-23px;color:rgb(32,142,115);">A R T I S T R E E</h2>
-            <div class="illustration" style="margin:3px;padding-bottom:18px;padding-top:-3;margin-top:-9px;height:181px;"><img src="/img/tree.png" style="width:100px;height:100px;"></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><a class="btn btn-primary btn-block" role="button" href="home.html" style="background-color:rgb(71,244,140);">Log In</a></div><a href="/Register" class="forgot" style="font-size:17px;padding:5px;color:rgb(6,150,255);">Register</a><a href="#"
-                class="forgot">Forgot your email or password?</a></form>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Fixed-navbar-starting-with-transparency.js"></script>
+
+            <div class="illustration" style="margin:3px;padding-bottom:18px;padding-top:-3;margin-top:-9px;height:181px;"> <img src="/img/tree.png" style="width:100px;height:100px;"></div>
+
+            <div class="login-box">
+                <input id="email" class="form-control" type="email" name="email" placeholder="Email">
+                
+                <br>
+
+                <input id="password" class="form-control" type="password" name="password" placeholder="Password">
+                
+                <a id="login-btn" class="login-btn btn" role="button" style="background-color:rgb(71,244,140);">Log In</a>
+                <br> 
+                <a href="/register" class="forgot" style="font-size:17px;padding:5px;color:rgb(6,150,255);">Register</a> 
+            </div>
+
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/components.js"></script>
+    </center>
 </body>
 
 </html>

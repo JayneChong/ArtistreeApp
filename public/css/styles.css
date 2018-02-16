@@ -1,0 +1,355 @@
+.nav-main-wrapper {
+  text-align:center;
+  box-shadow:none;
+  border:none;
+  border-radius:0;
+  margin-bottom:0;
+  background:#010101;
+}
+
+.nav-main-wrapper .navbar-brand {
+  color:#FFF;
+  box-shadow:none;
+  text-transform:uppercase;
+  font-size:16px;
+}
+
+.nav-main-wrapper .navbar-brand:hover {
+  color:#FFF;
+  box-shadow:none;
+  opacity:0.8;
+}
+
+.nav-main-wrapper ul {
+  float:none;
+}
+
+.nav-main-wrapper li {
+  float:none;
+  display:inline-block;
+}
+
+.nav-main-wrapper .navbar-nav > li > a {
+  text-shadow:none;
+  background:none;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#9c9c9c;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .nav-main-wrapper .navbar-nav > .active > a, .nav-main-wrapper .navbar-nav > .open > a, .nav-main-wrapper .navbar-nav > .open > a:hover, .nav-main-wrapper .navbar-nav > .active > a:hover {
+  color:#fff;
+  background-color:transparent;
+  background-image:none;
+  box-shadow:none;
+}
+
+.nav-main-wrapper .navbar-nav > .active > a:after, .nav-main-wrapper .navbar-nav > .open > a:after {
+  opacity:1;
+  bottom:10px;
+}
+
+.nav-main-wrapper li a:hover, .nav-main-wrapper li a:active, .nav-main-wrapper li.active, .nav-main-wrapper li a:focus {
+  background-color:transparent;
+  background-image:none;
+  -webkit-transition:all 320ms ease;
+  -moz-transition:all 320ms ease;
+  -ms-transition:all 320ms ease;
+  -o-transition:all 320ms ease;
+  transition:all 320ms ease;
+}
+
+.nav-main-wrapper li a:after {
+  content:'';
+  position:absolute;
+  display:block;
+  left:15px;
+  right:15px;
+  bottom:0px;
+  height:2px;
+  background:#FFF;
+  opacity:0;
+}
+
+.nav-main-wrapper .navbar-toggle {
+  border:none;
+  color:#FFF;
+}
+
+.nav-main-wrapper .navbar-toggle .icon-bar {
+  opacity:1;
+  background-color:#FFF;
+}
+
+.nav-main-wrapper .navbar-toggle:hover .icon-bar {
+  opacity:0.8;
+}
+
+.nav-main-wrapper .navbar-toggle:focus, .nav-main-wrapper .navbar-toggle:hover {
+  background-color:transparent;
+}
+
+@media (max-width:767px) {
+  .nav-main-wrapper li a:after {
+    opacity:0;
+    display:none;
+  }
+}
+
+@media (max-width:767px) {
+  .nav-main-wrapper li {
+    float:none;
+    display:block;
+    text-align:left;
+  }
+}
+
+ 
+ <--- NAV BAR --->
+
+.navbar.navbar-default.navbar-transparency, .navbar.navbar-inverse.navbar-transparency {
+  background:transparent;
+}
+
+.navbar.navbar-default:not(.navbar-transparency), .navbar.navbar-default:not(.navbar-transparency) .dropdown-menu, .navbar.navbar-default.navbar-transparency.navchange, .navbar.navbar-default.navbar-transparency.navchange .dropdown-menu, .navbar:not(.navbar-transparency) .dropdown-menu, .navbar.navbar-default:not(.navbar-fixed-top).navbar-transparency {
+  background:#dddddd;
+}
+
+.navbar.navbar-inverse:not(.navbar-transparency), .navbar.navbar-inverse:not(.navbar-transparency) .dropdown-menu, .navbar.navbar-inverse.navbar-transparency.navchange, .navbar.navbar-inverse.navbar-transparency.navchange .dropdown-menu, .navbar:not(.navbar-transparency) .dropdown-menu, .navbar.navbar-inverse:not(.navbar-fixed-top).navbar-transparency {
+  background:#333333;
+}
+
+@media (max-width:767px) {
+  .navbar.navbar-default .navbar-nav, .navbar.navbar-default.navbar-transparency, .navbar.navbar-default, .navbar.navbar-default .navbar-collapse {
+    background:#dddddd;
+  }
+}
+
+@media (max-width:767px) {
+  .navbar.navbar-inverse .navbar-nav, .navbar.navbar-inverse.navbar-transparency, .navbar.navbar-inverse, .navbar.navbar-inverse .navbar-collapse {
+    background:#333333;
+  }
+}
+
+.navbar.navbar-default .navbar-nav > li > a, .navbar.navbar-default a.navbar-brand.navbar-link, .navbar.navbar-default a.navbar-brand.navbar-link:hover {
+  color:#000000;
+  background:none;
+}
+
+.navbar.navbar-inverse .navbar-nav > li > a, .navbar.navbar-inverse a.navbar-brand.navbar-link, .navbar.navbar-inverse a.navbar-brand.navbar-link:hover {
+  color:#ffffff;
+  background:none;
+}
+
+.navbar.navbar-default .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > .open > a, .navbar.navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar.navbar-default .dropdown-menu, .navbar.navbar-default .dropdown-menu li > a:hover, .navbar.navbar-default .dropdown-menu li > a:focus {
+  color:#000000;
+  background:rgba(255,255,255,.4);
+}
+
+.navbar.navbar-inverse .navbar-nav > li > a:hover, .navbar.navbar-inverse .navbar-nav > li.active > a, .navbar-inverse .navbar-nav > .open > a, .navbar.navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar.navbar-inverse .dropdown-menu, .navbar.navbar-inverse .dropdown-menu li > a:hover, .navbar.navbar-inverse .dropdown-menu li > a:focus {
+  color:#ffffff;
+  background:rgba(0,0,0,.2);
+}
+
+.navbar.navbar-default .dropdown-menu li a {
+  color:#000000 !important;
+}
+
+.navbar.navbar-inverse .dropdown-menu li a {
+  color:#ffffff !important;
+}
+
+.navbar.navbar-default .dropdown-menu li a:hover, .navbar.navbar-default .dropdown-menu li.active a {
+  background-image:none !important;
+  background:rgba(255,255,255,.4) !important;
+}
+
+.navbar.navbar-inverse .dropdown-menu li a:hover, .navbar.navbar-inverse .dropdown-menu li.active a {
+  background-image:none !important;
+  background:rgba(0,0,0,.2) !important;
+}
+
+.navbar.navbar-default .icon-bar {
+  background:#000000;
+}
+
+.navbar.navbar-inverse .icon-bar {
+  background:#ffffff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color:rgba(255,255,255,.6);
+  border-width:1px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color:rgba(0,0,0,.6);
+  border-width:1px;
+}
+
+
+
+<---- LOGIN ----->
+.login-clean {
+  background:#fafdff;
+  padding:80px 0;
+}
+
+.login-clean form {
+  max-width:324px;
+  width:90%;
+  margin:auto;
+  background-color:#ffffff;
+  padding:40px;
+  border-radius:4px;
+  color:#505e6c;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.login-clean .illustration {
+  text-align:center;
+  padding:0 0 20px;
+  font-size:100px;
+  color:rgb(244,71,107);
+}
+
+.login-clean form .form-control {
+  background:#f7f9fc;
+  border:none;
+  border-bottom:1px solid #dfe7f1;
+  border-radius:0;
+  box-shadow:none;
+  outline:none;
+  color:inherit;
+  text-indent:8px;
+  height:42px;
+}
+
+.login-clean form .login-btn {
+  background:#f4476b;
+  border:none;
+  border-radius:4px;
+  padding:11px;
+  box-shadow:none;
+  margin-top:26px;
+  text-shadow:none;
+  outline:none !important;
+}
+
+.login-clean form .login-btn:hover, .login-clean form .login-btn:active {
+  background:#eb3b60;
+}
+
+.login-clean form .login-btn:active {
+  transform:translateY(1px);
+}
+
+.login-clean form .forgot {
+  display:block;
+  text-align:center;
+  font-size:12px;
+  color:#6f7a85;
+  opacity:0.9;
+  text-decoration:none;
+}
+
+.login-clean form .forgot:hover, .login-clean form .forgot:active {
+  opacity:1;
+  text-decoration:none;
+}
+
+
+
+
+<---- REGISTRATION ------>
+.register-form form.custom-form {
+  padding:55px;
+  box-sizing:border-box;
+  background-color:#ffffff;
+  box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font:bold 14px sans-serif;
+  text-align:center;
+  margin:5px;
+  color:#333;
+  align-content:center;
+}
+
+@media (max-width:400px) {
+  .register-form form.custom-form {
+    padding:55px 10px;
+  }
+}
+
+.register-form .custom-form h1 {
+  display:inline-block;
+  color:#4c565e;
+  font-size:24px;
+  font-weight:bold;
+  padding:0 10px 15px;
+  margin-bottom:60px;
+  border-bottom:2px solid rgb(89,231,129);
+}
+
+.register-form .custom-form .login-box {
+  margin-bottom:25px;
+}
+
+.register-form .custom-form .label-column {
+  text-align:right;
+  color:#5F5F5F;
+}
+
+@media (max-width:768px) {
+  .register-form .custom-form .label-column {
+    text-align:left;
+  }
+}
+
+.register-form .custom-form .input-column {
+  color:#5f5f5f;
+  text-align:left;
+}
+
+.register-form .custom-form .input-column input {
+  color:#5f5f5f;
+  box-shadow:1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding:12px;
+  border:1px solid #dbdbdb;
+  border-radius:2px;
+  height:42px;
+}
+
+.register-form .custom-form .dropdown .dropdown-toggle {
+  background:#fff;
+  border:1px solid #dbdbdb;
+  box-shadow:1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  color:#333;
+  outline:none;
+}
+
+.register-form .custom-form .dropdown ul {
+  background:#fff;
+}
+
+.register-form .custom-form .dropdown ul li a {
+  background:#fff;
+  color:#333;
+  opacity:0.8;
+}
+
+.register-form .custom-form .dropdown ul li a:hover {
+  opacity:1;
+}
+
+.register-form .custom-form .submit-button {
+  border-radius:2px;
+  background:#6caee0;
+  color:#ffffff;
+  font-weight:bold;
+  box-shadow:1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding:14px 22px;
+  border:0;
+  margin:30px;
+  outline:none;
+}
+
