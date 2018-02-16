@@ -1,4 +1,4 @@
-//-------------- LOGIN -----------------
+//-------------- LOGIN: currently incomplete -----------------
 
 function login() {
  var email = $('#email').val();
