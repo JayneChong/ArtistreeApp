@@ -15,7 +15,9 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var home = require('./routes/home');
 var collection = require('./routes/collection');
-var add = require('./routes/add');
+var add_projects = require('./routes/add_projects');
+var add_entries = require('./routes/add_entries');
+//var add_tasks = require('./routes/add_tasks');
 
 
 var app = express();
@@ -46,7 +48,9 @@ app.get('/', login.view);
 app.get('/register', register.view);
 app.get('/home', home.view);
 app.get('/collection', collection.view);
-app.get('/add', add.view);
+app.get('/add_projects', add_projects.view);
+app.get('/add_entries', add_entries.view);
+//app.get('/add_tasks', add_tasks.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
