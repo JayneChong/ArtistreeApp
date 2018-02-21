@@ -17,7 +17,7 @@ var home = require('./routes/home');
 var collection = require('./routes/collection');
 var add_projects = require('./routes/add_projects');
 var add_entries = require('./routes/add_entries');
-//var add_tasks = require('./routes/add_tasks');
+var add_tasks = require('./routes/add_tasks');
 
 
 var app = express();
@@ -50,7 +50,7 @@ app.get('/home', home.view);
 app.get('/collection', collection.view);
 app.get('/add_projects', add_projects.view);
 app.get('/add_entries', add_entries.view);
-//app.get('/add_tasks', add_tasks.view);
+app.get('/add_tasks', add_tasks.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
