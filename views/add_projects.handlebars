@@ -22,15 +22,17 @@
 							<li class="nav-item">
 								<a class="nav-link " href="/home" data-toggle="/home">Home</a>
 							</li>
-							<li class=" dropdown nav-item">
-								<a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
-								<div class="dropdown-menu">
-									<a href="/add_projects" class="dropdown-item">Add Projects</a>
-									<div class="dropdown_divider"></div>
-									<a href="/add_entries" class="dropdown-item">Add Entries</a>
-									<div class="dropdown-divider"></div>
-									<a href="/add_tasks" class="dropdown-item">Add Tasks</a> 
-								</div>
+
+<!--                             <li class=" dropdown nav-item">
+                                <a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
+                                <div class="dropdown-menu">
+                                    <a href="/add_projects" class="dropdown-item">Add Projects</a>
+                                </div> -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
+                                </li>
+
 								<li class="nav-item">
 									<a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
 								</li>
@@ -59,7 +61,7 @@
 								<div class="form-group">
 									<label for="exampleFormControlSelect1">Project Name</label>
 									
-									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="project">
+									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. Engagement Shoot">
 								</div>
 
 								<br>
@@ -67,28 +69,27 @@
 								<div class="form-group">
 									<label for="exampleFormControlSelect1">Art Form</label>
 									<select class="form-control" id="exampleFormControlSelect1">
-										<option>Art 1</option>
-										<option>Art 2</option>
-										<option>Art 3</option>
+										<option>Photography</option>
+										<option>Music</option>
 									</select>
 								</div>
 								
 								<br>
 
-								<div class="input-group">
+<!-- 								<div class="input-group">
 									<label for="exampleFormControlSelect1">Duedate</label>
 									
 									<input type="text" class="form-control datetimepicker" value="01/01/2018"> </div>
 
 
-									<br><br>
+									<br><br> -->
 
 									<div class="form-group">
 										<label for="exampleFormControlTextarea1">Description</label>
 										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 									</div>  
 
-								<div class="task">
+<!-- 								<div class="task">
 									<div id="myDIV" class="header">
   										<h5>Tasks to Complete</h5>
   										<input type="text" id="myInput" placeholder="Tasks...">
@@ -99,7 +100,8 @@
 									<ul id="myUL">
 							
 									</ul>
-								</div>
+								</div> -->
+								
 								<div class="card-footer justify-content-center">
 									<a id="input" class="btn btn-link btn-primary btn-lg">Get Started</a>
 								</div>
@@ -151,52 +153,8 @@
             });
         });
 
-        var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
 
-
-//add a check
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-//new task
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-    </script>
+</script>
 
 </body>
 
