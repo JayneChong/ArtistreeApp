@@ -282,6 +282,11 @@
 <script>
     var dt = new Date();
     document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+
+var Kitten = mongoose.model('Kitten', kittySchema);
+var silence = new Kitten({ name: 'Silence' });
+console.log(silence.name); // 'Silence'
+
 </script>
 
 <script src="js/jquery.min.js"></script>
