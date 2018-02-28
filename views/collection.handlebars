@@ -23,35 +23,39 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/home" data-toggle="/home">Home</a>
                             </li>
+<!--                             <li class=" dropdown nav-item">
+                                <a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
+                                <div class="dropdown-menu">
+                                    <a href="/add_projects" class="dropdown-item">Add Projects</a>
+                                </div> -->
 
-                    <li class=" dropdown nav-item">
-                        <a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
-                        <div class="dropdown-menu">
-                            <a href="/add_projects" class="dropdown-item">Add Projects</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="/add_entries" class="dropdown-item">Add Entries</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="/add_tasks" class="dropdown-item">Add Tasks</a> 
-                        </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/add_projects" data-toggle="/add_projects">add</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/collection" data-toggle="/collection">collection</a>
-                            </li>
-                            <li class="nav-item">
-                                 <a class="nav-link" href="/" data-toggle="/">logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav> <br>
 
-    
-    <br>
-    <!-- Navigation Bar END -->
-	
-	<div class="main main-raised"> 
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/collection" data-toggle="/collection">collection</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/" data-toggle="/">logout</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </nav> <br>
+
+
+       <br>
+       <!-- Navigation Bar END -->
+
+
+
+
+       <!-- OLD - SAVED -->
+<!-- 	<div class="main main-raised"> 
     	<div class="container">
     		<br>
 
@@ -60,10 +64,9 @@
 
     		<div class="grid-view">
     			<ul>
-    				<li><a href="#"><img src="http://lorempixel.com/200/200"></a> </li>  <h5><span> Project 1 </span></h5> 
-    				<li><a href="#"><img src="http://lorempixel.com/200/200/nature"></a> <h5><span> Project 2 </span></h5></li>
-    				<li><a href="#"><img src="http://lorempixel.com/200/200/city"></a> <h5><span> Project 3 </span></h5></li>
-    				<li><a href="#"><img src="http://lorempixel.com/200/200/abstract"></a> <h5><span> Project 4</span></h5></li>
+    				<li><a href="#"><img src="/img/engagmentshootproj.jpg"></a> </li> 
+    				<li><a href="#"><img src="/img/learnguitarproj.jpg"></a></li>
+
     			</ul>
     		</div>
 
@@ -71,15 +74,95 @@
 
 
   		 </div>
-	</div>
+       </div> -->
+
+
+       <!-- GRID VIEW OF PROJECTS -->
+       <center><h2> A COLLECTION OF YOUR PROJECTS </h2></center>
+
+       <ul id="rig">
+        <li>
+            <a class="rig-cell">
+                <img class="rig-img"  data-toggle="modal" data-target="#project1" src="/img/engagmentshootproj.jpg">
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Engagement Shoot 0</span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" data-toggle="modal" data-target="#project2">
+                <img class="rig-img" data-toggle="modal" data-target="#project1" src="/img/learnguitarproj.jpg">
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Learn Guitar Basics 0</span>
+            </a>
+        </li>
 
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/components.js"></script>
+        <!-- Floating Modal -->
+        <div class="modal fade" id="project1" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Engagement Shoot</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">x</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3> Location scouting </h3>
+                        <h4> January 1, 2018 </h4>
+                        <p> Beautiful garden area in the Botanical Gardens
+                            <br>
+                            <img src="/img/garden.jpg"  style= "width:206px;height:137px" > 
+                        </p> 
+                        <br> <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link btn-success" href="/add_entries" >Add Entries</button>
+                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</body>
 
-</html>
+        <div class="modal fade" id="project2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Learn Guitar Basics</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">x</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3> 2 Hour Practice </h3>
+                        <h4> January 1, 2018 </h4>
+                        <p> Practiced for two hours today. Worked on all major chords. Feeling pretty good! 
+                            
+                            <audio controls>
+                              <source src="/audio/24.wav" type="audio/wav">
+                                </audio>
+
+                            </p> 
+                            <hr>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link btn-success">Add Entries</button>
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  End Modal -->
+
+
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/components.js"></script>
+
+        </body>
+
+        </html>
