@@ -112,6 +112,11 @@
                                     </div>
                                 </div>
 
+                                <div id="result"></div>
+                                <div id="result1"></div>
+                                <div id="result2"></div>
+                                <div id="result3"></div>
+                                <div id="result4"></div>
 
                             </div>
 
@@ -201,6 +206,7 @@
                         <div class="tab-pane" id="c-art1">
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
+                   
                                     <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#project1">
                                         Engagment Shoot 0
                                     </button>
@@ -291,8 +297,31 @@
 
 <!--- date/time --> 
 <script>
+
+//localStorage.clear();
+
+//displaying the storage onto active projects
+var projectsArray = JSON.parse(localStorage.getItem("projName"));
+
+//this gets individual elements in the array
+//document.getElementById("result").innerHTML = projectsArray[0];
+//document.getElementById("result1").innerHTML = projectsArray[1];
+
+
+    if (localStorage.projName){
+        document.getElementById("result").innerHTML = localStorage.getItem("projName");
+        document.getElementById("result1").innerHTML = localStorage.getItem("artForm");
+        document.getElementById("result2").innerHTML = localStorage.getItem("dueDate");
+        document.getElementById("result3").innerHTML = localStorage.getItem("description");
+        document.getElementById("result4").innerHTML = localStorage.getItem("taskList");
+
+    }
+
     var dt = new Date();
     document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+
+
+
 </script>
 
 <script src="js/jquery.min.js"></script>
@@ -302,3 +331,4 @@
 </body>
 
 </html>
+
