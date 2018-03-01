@@ -250,7 +250,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Engagement Shoot</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">x</i>
+                    <!--<i class="material-icons">x</i> -->
                 </button>
             </div>
             <div class="modal-body">
@@ -281,6 +281,7 @@
                     <i class="material-icons">x</i>
                 </button>
             </div>
+
             <div class="modal-body">
 
                 <h3> 2 Hour Practice </h3>
@@ -294,6 +295,7 @@
                   </p> 
                   <hr>
               </div>
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-link btn-success">Add Entries</button>
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
@@ -318,6 +320,8 @@ var descArray = JSON.parse(localStorage.getItem("description"));
 //making new buttons everytime new project is created
 for (var i=0; i<projectsArray.length; i++){
     var thisName = projectsArray[i];
+    var thisForm = formsArray[i];
+    var thisDesc = descArray[i];
     var li = document.createElement("li");
 
 //.createElement creates the individual element to make it look pretty
@@ -338,22 +342,94 @@ for (var i=0; i<projectsArray.length; i++){
     div1.appendChild(div2);
     li.appendChild(div1);
     document.getElementById("projList").appendChild(li);
+    console.log("proj list worked")
 
 
+//floating modal starting here
     var liM = document.createElement("li");
     var div1M = document.createElement("div");
     div1M.className = "modal fade";
-    div1M.setAttribute = ("id", "project"+i);
-    div1M.setAttribute = ("tabindex", "-1");
-    div1M.setAttribute = ("role", "dialog");
+    div1M.setAttribute("id", "project"+i);
+    div1M.setAttribute("tabindex", "-1");
+    div1M.setAttribute("role", "dialog");
 
     var div2M = document.createElement("div");
     div2M.className = "modal-dialog";
-    div2M.setAttribute = ("role", "document");
+    div2M.setAttribute("role", "document");
+
+    var div3M = document.createElement("div");
+    div3M.className = "modal-content";
+
+    var div4M = document.createElement("div");
+    div4M.className = "modal-header";
+
+    var h5M = document.createElement("h5");
+    h5M.className = "modal-title";
+    var tM = document.createTextNode(thisName);
+
+    /*var buttonM = document.createElement("button");
+    buttonM.className = "close";
+    buttonM.setAttribute("type", "button");
+    buttonM.setAttribute("data-dismiss", "modal");
+    buttonM.setAttribute("aria-label", "Close");
+
+    var iM = document.createElement("i");
+    iM.className = "material-icons";
+    var iMtext = document.createTextNode("x");*/
+
+    var div5M = document.createElement("div");
+    div5M.className = "modal-body";
+
+    var h3M = document.createElement("h3");
+    var h3M = document.createTextNode(thisDesc);
+
+    var div6M = document.createElement("div");
+    div6M.className = "modal-footer";
+
+    var button2M = document.createElement("button");
+    button2M.setAttribute("type", "button");
+    button2M.className = "btn btn-link btn-success";
+    var button2Mtext = document.createTextNode("Add Entries");
+
+    var button3M = document.createElement("button");
+    button3M.className = "btn btn-link";
+    button3M.setAttribute("type", "button");
+    button3M.setAttribute("data-dismiss", "modal");
+    var button3Mtext = document.createTextNode("Close");
+
+
+//title name, x
+    /*iM.appendChild(iMtext);
+    buttonM.appendChild(iM);*/
+    h5M.appendChild(tM);
+    div4M.appendChild(h5M);
+    //div4M.appendChild(buttonM);
+
+//description
+    div5M.appendChild(h3M);
+
+//Add entries, close
+    button2M.appendChild(button2Mtext);
+    button3M.appendChild(button3Mtext);
+    div6M.appendChild(button2M);
+    div6M.appendChild(button3M);
+
+//combining all content
+    div3M.appendChild(div4M);
+    div3M.appendChild(div5M);
+    div3M.appendChild(div6M);
+    div2M.appendChild(div3M);
+    div1M.appendChild(div2M);
+    liM.appendChild(div1M);
+
+    document.getElementById("modalList").appendChild(liM);
+
+    console.log(document.getElementById("modalList").getElementsByTagName("li").length);
 
 
 
 }
+
 
 
 //this gets individual elements in the array
