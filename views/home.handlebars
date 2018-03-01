@@ -57,7 +57,9 @@
             <br><br>
             <div class="main main-raised"> 
                 <div class="container">
-                    <div class="title"> <h2><span id="datetime"></span></h2> </div>
+
+                    <!-- Current date -->
+                    <!-- <div class="title"> <h2><span id="datetime"></span></h2> </div> -->
 
                     <!-- Active Project tabs -->
                     <h2> ACTIVE PROJECTS </h2>
@@ -311,9 +313,9 @@ var projectsArray = JSON.parse(localStorage.getItem("projName"));
     if (localStorage.projName){
         document.getElementById("result").innerHTML = localStorage.getItem("projName");
         document.getElementById("result1").innerHTML = localStorage.getItem("artForm");
-        document.getElementById("result2").innerHTML = localStorage.getItem("dueDate");
+        //document.getElementById("result2").innerHTML = localStorage.getItem("dueDate");
         document.getElementById("result3").innerHTML = localStorage.getItem("description");
-        document.getElementById("result4").innerHTML = localStorage.getItem("taskList");
+        //document.getElementById("result4").innerHTML = localStorage.getItem("taskList");
 
     }
 
