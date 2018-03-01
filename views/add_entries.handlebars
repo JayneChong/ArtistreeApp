@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ARTISTREE [ADD]</title>
+	<title>ARTISTREE [ENTRIES]</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -55,108 +55,97 @@
         		<div class="col-md-4 ml-auto mr-auto">
         			<div class="card card-signup">
         				<form class="form" method="" action="">
-        					<p class="text-divider">Get started on your project!</p>
+        					<p class="text-divider">ADD ENTRIES</p>
         					<div class="card-body">
 
         						<div class="form-group">
-        							<label for="projName">Project Name</label>
+        							<label for="entryTitle">Title</label>
 
-        							<input type="text" class="form-control" id="projName" placeholder="project x">
+        							<input type="text" class="form-control" id="projName" placeholder="entry title">
 
         						</div>
 
         						<br>
 
-        						<div class="form-group">
-        							<label for="artForm">Art Form</label>
-        							<select class="form-control" id="artForm">
-        								<option>Photography</option>
-        								<option>Music</option>
-        							</select>
-        						</div>
-        						
-        						<br>
+                                <div class="input-group">
+                                    <label for="exampleFormControlSelect1">Date</label>
+                                    <input type="text" class="form-control datetimepicker" value="01/01/2018"> 
+                                </div>
 
-<!-- 								<div class="input-group">
-									<label for="exampleFormControlSelect1">Duedate</label>
-									
-									<input type="text" class="form-control datetimepicker" value="01/01/2018"> </div>
-									<br><br> -->
+
+                                <br><br>
+
+                                <br>
 
 									<div class="form-group">
-										<label for="description">Description</label>
-										<textarea class="form-control" id="description" rows="3"></textarea>
+										<label for="description">Entry Content</label>
+										<textarea class="form-control" id="description" rows="5"></textarea>
 									</div>  
 
-<!-- 								<div class="task">
-									<div id="myDIV" class="header">
-  										<h5>Tasks to Complete</h5>
-  										<input type="text" id="myInput" placeholder="Tasks...">
-  										<span onclick="newElement()" class="btn btn-primary btn-sm">Add</span>
-									</div>
-								</div>
-									<ul id="myUL">
-							
-									</ul>
-								</div> -->
-								
-								<div class="card-footer justify-content-center">
-									<button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal();">Get Started</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+                                    <label class="custom-file">
+                                      <input type="file" id="file" class="custom-file-input">
+                                      <span class="custom-file-control"></span>
+                                  </label>
+
+
+                                  <div class="card-footer justify-content-center">
+                                   <button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal();">Get Started</button>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+           </div>
 
 
 
 
 
-		</div>
-	</div>
+       </div>
+   </div>
 
 
 
-	<!-- JSFILES -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/components.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
-	<script src="routes/add_projects.js"></script>
-	<script>
+   <!-- JSFILES -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/components.js"></script>
+   <script src="js/bootstrap-datetimepicker.min.js"></script>
+   <script src="routes/add_projects.js"></script>
 
-//new task
-function newElement() {
-	var li = document.createElement("li");
-	var inputValue = document.getElementById("myInput").value;
-	var t = document.createTextNode(inputValue);
-	li.appendChild(t);
-	if (inputValue === '') {
-		alert("You must write something!");
-	} else {
-		document.getElementById("myUL").appendChild(li);
-	}
-	document.getElementById("myInput").value = "";
+   <!-- JS DATE PICKER -->
+   <script>
+      <script>
+      $(document).ready(function() {
+       materialKitDemo.initFormExtendedDatetimepickers();
+       var slider = document.getElementById('sliderRegular');
+       noUiSlider.create(slider, {
+           start: 40,
+           connect: [true, false],
+           range: {
+               min: 0,
+               max: 100
+           }
+       });
 
-  /*var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);*/
+       var slider2 = document.getElementById('sliderDouble');
 
-  for (i = 0; i < close.length; i++) {
-  	close[i].onclick = function() {
-  		var div = this.parentElement;
-  		div.style.display = "none";
-  	}
-  }
-}
-
-
-
+       noUiSlider.create(slider2, {
+           start: [20, 60],
+           connect: true,
+           range: {
+               min: 0,
+               max: 100
+           }
+       });
+   });
 </script>
+</script>
+<!-- END JS DATE PICKER -->
 
+
+
+<!-- L O C A L   S T O R A G E -->
 <script>
 // Check browser support
 if (typeof(Storage) !== "undefined") {
@@ -164,8 +153,8 @@ if (typeof(Storage) !== "undefined") {
     function saveLocal(){
 
     	console.log("hi");
-    	var thisName = document.getElementById("projName").value;
-    	var thisForm = document.getElementById("artForm").value;
+    	var thisName = document.getElementById("entryTitle").value;
+    	var thisDate = document.getElementById("entryDate").value;
     //var thisDate = document.getElementById("dueDate").value;
     var thisDescription = document.getElementById("description").value;
     /*var arr = document.getElementById("myUL");
@@ -228,6 +217,7 @@ if (typeof(Storage) !== "undefined") {
 }
 </script>
 
+<!-- E N D   L O C A L   S T O R A G E -->
 
 </body>
 

@@ -114,3 +114,6 @@ function login() {
   });
 
 });
+
+// Modal from Materials
+$('#myModal').modal(options) 
