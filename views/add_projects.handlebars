@@ -30,52 +30,52 @@
                                 </div> -->
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
+                                	<a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
                                 </li>
 
-								<li class="nav-item">
-									<a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/" data-toggle="/">logout</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav> <br>
-		<!-- Navigation Bar END -->
+                                <li class="nav-item">
+                                	<a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
+                                </li>
+                                <li class="nav-item">
+                                	<a class="nav-link" href="/" data-toggle="/">logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> <br>
+        <!-- Navigation Bar END -->
 
 
 
-		<!-- FORM -->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 ml-auto mr-auto">
-					<div class="card card-signup">
-						<form class="form" method="" action="">
-							<p class="text-divider">Get started on your project!</p>
-							<div class="card-body">
+        <!-- FORM -->
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-4 ml-auto mr-auto">
+        			<div class="card card-signup">
+        				<form class="form" method="" action="">
+        					<p class="text-divider">Get started on your project!</p>
+        					<div class="card-body">
 
-								<div class="form-group">
-									<label for="projName">Project Name</label>
+        						<div class="form-group">
+        							<label for="projName">Project Name</label>
 
-									<input type="text" class="form-control" id="projName" placeholder="project x">
+        							<input type="text" class="form-control" id="projName" placeholder="project x">
 
-								</div>
+        						</div>
 
-								<br>
+        						<br>
 
-								<div class="form-group">
-									<label for="artForm">Art Form</label>
-									<select class="form-control" id="artForm">
-										<option>Photography</option>
-										<option>Music</option>
-									</select>
-								</div>
-								
-								<br>
+        						<div class="form-group">
+        							<label for="artForm">Art Form</label>
+        							<select class="form-control" id="artForm">
+        								<option>Photography</option>
+        								<option>Music</option>
+        							</select>
+        						</div>
+        						
+        						<br>
 
 <!-- 								<div class="input-group">
 									<label for="exampleFormControlSelect1">Duedate</label>
@@ -101,7 +101,7 @@
 								</div> -->
 								
 								<div class="card-footer justify-content-center">
-									<button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal();">Get Started</button>
+									<button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal(); location.href='/home'">Get Started</button>
 								</div>
 							</form>
 						</div>
@@ -125,42 +125,19 @@
 	<script src="js/bootstrap-datetimepicker.min.js"></script>
 	<script src="routes/add_projects.js"></script>
 	<script>
-		$(document).ready(function() {
-			materialKitDemo.initFormExtendedDatetimepickers();
-            // Sliders for demo purpose in refine cards section
-            var slider = document.getElementById('sliderRegular');
-            noUiSlider.create(slider, {
-            	start: 40,
-            	connect: [true, false],
-            	range: {
-            		min: 0,
-            		max: 100
-            	}
-            });
-            var slider2 = document.getElementById('sliderDouble');
-            noUiSlider.create(slider2, {
-            	start: [20, 60],
-            	connect: true,
-            	range: {
-            		min: 0,
-            		max: 100
-            	}
-            });
-        });
-
 
 //new task
 function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+	var li = document.createElement("li");
+	var inputValue = document.getElementById("myInput").value;
+	var t = document.createTextNode(inputValue);
+	li.appendChild(t);
+	if (inputValue === '') {
+		alert("You must write something!");
+	} else {
+		document.getElementById("myUL").appendChild(li);
+	}
+	document.getElementById("myInput").value = "";
 
   /*var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -169,10 +146,10 @@ function newElement() {
   li.appendChild(span);*/
 
   for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+  	close[i].onclick = function() {
+  		var div = this.parentElement;
+  		div.style.display = "none";
+  	}
   }
 }
 
@@ -186,9 +163,9 @@ if (typeof(Storage) !== "undefined") {
     // Store
     function saveLocal(){
 
-    console.log("hi");
-    var thisName = document.getElementById("projName").value;
-    var thisForm = document.getElementById("artForm").value;
+    	console.log("hi");
+    	var thisName = document.getElementById("projName").value;
+    	var thisForm = document.getElementById("artForm").value;
     //var thisDate = document.getElementById("dueDate").value;
     var thisDescription = document.getElementById("description").value;
     /*var arr = document.getElementById("myUL");
@@ -219,7 +196,7 @@ if (typeof(Storage) !== "undefined") {
 
     	//var taskList = JSON.parse(localStorage.getItem("taskList"));
     	//taskList.push(thisList);
-	}else{
+    }else{
 		//if completely new project
 		var storedNames = [];
 		storedNames[0] = thisName;
@@ -238,16 +215,16 @@ if (typeof(Storage) !== "undefined") {
 	}
 
 	//stores into localStorage as a string
-    console.log("hi");
-    localStorage.setItem("projName", JSON.stringify(storedNames));
-    localStorage.setItem("artForm", JSON.stringify(artForm));
+	console.log("hi");
+	localStorage.setItem("projName", JSON.stringify(storedNames));
+	localStorage.setItem("artForm", JSON.stringify(artForm));
     //localStorage.setItem("dueDate", JSON.stringify(dueDate));
     localStorage.setItem("description", JSON.stringify(description));
     //localStorage.setItem("taskList", JSON.stringify(taskList));
     // Retrieve
-    }
+}
 } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+	document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
 </script>
 
