@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+    <!-- ++++++++++++++++++++++++++++++++++++ Navigation Bar ++++++++++++++++++++++++++++++++++++++++ -->
+
     <nav>
         <div class=" card card-nav-tabs card-plain">
             <div class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg card-header card-header-success">
@@ -61,7 +62,8 @@
                     <!-- Current date -->
                     <!-- <div class="title"> <h2><span id="datetime"></span></h2> </div> -->
 
-                    <!-- Active Project tabs -->
+                    <!-- +++++++++++++++++++ A C T I V E project T A B +++++++++++++++++++ -->
+
                     <h2> ACTIVE PROJECTS </h2>
 
                     <div class="card card-nav-tabs">
@@ -93,6 +95,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Active Projects List -->
                     <div class="card-body ">
                         <div class="tab-content text-center">
@@ -150,7 +153,7 @@
 
 
 
-            <!-- Completed Project tabs -->
+            <!-- +++++++++++++++++++++++++++ C O M P L E T E D  Projects TABS ++++++++++++++++++++++++++++++ -->
             <h2> COMPLETED PROJECTS </h2>
 
             <div class="card card-nav-tabs">
@@ -182,8 +185,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Active Projects List -->
+            
+            <!-- +++++++++++++++++++++++++++ C O M P L E T E D  Projects LIST ++++++++++++++++++++++++++++++ -->
             <div class="card-body ">
                 <div class="tab-content text-center">
                     <div class="tab-pane active" id="c-art">
@@ -232,6 +235,8 @@
             </div>
         </div>
 
+        <!-- +++++++++++++++++++++++++++ E N D COMPLETE  Projects LIST ++++++++++++++++++++++++++++++ -->
+
 
 
     </div>
@@ -265,8 +270,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link btn-success btn-danger pull-left" onclick="deleteProject();" >Delete Project</button>
-                <button type="button" class="btn btn-link btn-success" href="/add_entries" >Add Entries</button>
-                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'" >Add Progress</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close
+                </button>
             </div>
         </div>
     </div>
@@ -300,8 +306,13 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-link btn-success btn-danger pull-left" onclick="deleteProject();" >Delete Project</button>
-                <button type="button" class="btn btn-link btn-success">Add Entries</button>
+                <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'" >Add Progress</button>
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+            </div>
+
+
+
+<!-- ++++++++++++++++++++++ COMPLETED PROJECT F L O A T I N G    M O D A L +++++++++++++++++++++++++++ -->
 
     <li>
         <div class="modal fade" id="projectA" tabindex="-1" role="dialog">
@@ -310,7 +321,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">Engagement Shoot</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Entries</button>
+                            <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
                             <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
                         </button>
                     </div>
@@ -324,13 +335,17 @@
                         <br> <hr>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Entries</button>
+                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
                         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </li>
+
+
+<!-- ++++++++++++++++++++++++++++++++++ END COMPLETE PROJ FLOATING MODAL +++++++++++++++++++++++++++++++ -->
+
 
     <li>
         <div class="modal fade" id="projectB" tabindex="-1" role="dialog">
@@ -356,7 +371,7 @@
                           <hr>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-success">Add Entries</button>
+                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
                         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -423,7 +438,7 @@ for (var i=0; i<projectsArray.length; i++){
     var div4M = document.createElement("div");
     div4M.className = "modal-header";
 
-    var h5M = document.createElement("h5");
+    var h5M = document.createElement("h2");
     h5M.className = "modal-title";
     var tM = document.createTextNode(thisName);
 
@@ -431,11 +446,11 @@ for (var i=0; i<projectsArray.length; i++){
     buttonM.className = "close";
     buttonM.setAttribute("type", "button");
     buttonM.setAttribute("data-dismiss", "modal");
-    buttonM.setAttribute("aria-label", "Close");
+    buttonM.setAttribute("aria-label", "Close"); */
 
     var iM = document.createElement("i");
     iM.className = "material-icons";
-    var iMtext = document.createTextNode("x");*/
+    var iMtext = document.createTextNode("x");
 
     var div5M = document.createElement("div");
     div5M.className = "modal-body";
@@ -444,7 +459,7 @@ for (var i=0; i<projectsArray.length; i++){
     var h3M = document.createTextNode(thisDesc);
 
     var div6M = document.createElement("div");
-    div6M.className = "modal-footer";
+    div6M.className = "modal-footer"; 
 
     var buttonM = document.createElement("button");
     buttonM.setAttribute("type", "button");
@@ -453,9 +468,9 @@ for (var i=0; i<projectsArray.length; i++){
 
     var button2M = document.createElement("button");
     button2M.setAttribute("type", "button");
-    button2M.setAttribute("href", "/add_entries");
+    button2M.setAttribute("onclick", "location.href='/add_entries'");
     button2M.className = "btn btn-link btn-success";
-    var button2Mtext = document.createTextNode("Add Entries");
+    var button2Mtext = document.createTextNode("Add Progress");
 
     var button3M = document.createElement("button");
     button3M.className = "btn btn-link";
@@ -474,7 +489,7 @@ for (var i=0; i<projectsArray.length; i++){
 //description
     div5M.appendChild(h3M);
 
-//Add entries, close
+//Add Progress, close
     buttonM.appendChild(buttonMtext);
     button2M.appendChild(button2Mtext);
     button3M.appendChild(button3Mtext);
@@ -535,6 +550,8 @@ div2M.setAttribute = ("role", "document");
 
     //var thisName = document.getElementById("projName").value;
 }
+
+
 
 
 //this gets individual elements in the array
