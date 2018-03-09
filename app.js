@@ -15,8 +15,8 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var home = require('./routes/home');
 var collection = require('./routes/collection');
-var add_projects = require('./routes/add_projects');
-var add_entries = require('./routes/add_entries');
+var addProjects = require('./routes/addProjects');
+var addEntries = require('./routes/addEntries');
 
 
 var home_B = require('./routes/home_B');
@@ -52,8 +52,8 @@ app.get('/', login.view);
 app.get('/register', register.view);
 app.get('/home', home.view);
 app.get('/collection', collection.view);
-app.get('/add_projects', add_projects.view);
-app.get('/add_entries', add_entries.view);
+app.get('/addProjects', addProjects.view);
+app.get('/addEntries', addEntries.view);
 
 app.get('/home_B', home_B.view);
 app.get('/addProjects_B', addProjects_B.view);
