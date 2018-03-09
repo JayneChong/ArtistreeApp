@@ -2,26 +2,26 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ARTISTREE [ADD]</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/materials.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTISTREE [ADD]</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materials.css">
 </head>
 
 <body>
-	<!-- Navigation Bar -->
-	<nav>
-		<div class=" card card-nav-tabs card-plain">
-			<div class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg card-header card-header-success">
-				<div class="nav-tabs-navigation">
-					<div class="nav-tabs-wrapper">
-						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item">
-								<a class="nav-link " href="/home" data-toggle="/home">Home</a>
-							</li>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class=" card card-nav-tabs card-plain">
+            <div class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg card-header card-header-success">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link " href="/home" data-toggle="/home">Home</a>
+                            </li>
 
 <!--                             <li class=" dropdown nav-item">
                                 <a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
@@ -30,14 +30,14 @@
                                 </div> -->
 
                                 <li class="nav-item">
-                                	<a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
+                                    <a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
                                 </li>
 
                                 <li class="nav-item">
-                                	<a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
+                                    <a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
                                 </li>
                                 <li class="nav-item">
-                                	<a class="nav-link" href="/" data-toggle="/">logout</a>
+                                    <a class="nav-link" href="/" data-toggle="/">logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,33 +51,45 @@
 
         <!-- FORM -->
         <div class="container">
-        	<div class="row">
-        		<div class="col-md-4 ml-auto mr-auto">
-        			<div class="card card-signup">
-        				<form class="form" method="" action="">
-        					<p class="text-divider">Get started on your project!</p>
-        					<div class="card-body">
+            <div class="row">
+                <div class="col-md-4 ml-auto mr-auto">
+                    <div class="card card-signup">
+                        <form class="form" method="" action="">
+                            <p class="text-divider">Get started on your project!</p>
+                            <div class="card-body">
 
-        						<div class="form-group">
-        							<label for="projName">Project Name</label>
+                                <div class="form-group">
+                                    <label for="projName">Project Name</label>
 
-        							<input type="text" class="form-control" id="projName" placeholder="project x">
+                                    <input type="text" class="form-control" id="projName" placeholder="project x">
 
-        						</div>
+                                </div>
 
-        						<br>
+                                <br>
 
-        						<div class="form-group">
-        							<label for="artForm">Art Form</label>
-        							<select class="form-control" id="artForm">
-        								<option>Pick Your Art</option>
+                                <div class="form-group">
+                                    <label for="artForm">Art Form</label>
+                                    <select class="form-control" id="artForm">
+                                        <option>Pick Your Art</option>
                                         <option>Photography</option>
-        								<option>Music</option>
-        							</select>
-        						</div>
+                                        <option>Music</option>
+                                    </select>
+                                </div>
+                                
+                                <br>
 
+<!--                                <div class="input-group">
+                                    <label for="exampleFormControlSelect1">Duedate</label>
+                                    
+                                    <input type="text" class="form-control datetimepicker" value="01/01/2018"> </div>
+                                    <br><br> -->
 
-                            <div class="task">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" id="description" rows="3"></textarea>
+                                    </div>  
+
+<!--                                <div class="task">
                                     <div id="myDIV" class="header">
                                         <h5>Tasks to Complete</h5>
                                         <input type="text" id="myInput" placeholder="Tasks...">
@@ -85,79 +97,48 @@
                                     </div>
                                 </div>
                                     <ul id="myUL">
-                                    </ul>
-
-        						
-        						<br>
-
-<!-- 								<div class="input-group">
-									<label for="exampleFormControlSelect1">Duedate</label>
-									
-									<input type="text" class="form-control datetimepicker" value="01/01/2018"> </div>
-									<br><br> -->
-
-									<div class="form-group">
-										<label for="description">Description</label>
-										<textarea class="form-control" id="description" rows="3"></textarea>
-									</div>  
-
-
-<!--
- 								<div class="task">
-									<div id="myDIV" class="header">
-  										<h5>Tasks to Complete</h5>
-  										<input type="text" id="myInput" placeholder="Tasks...">
-  										<span onclick="newElement()" class="btn btn-primary btn-sm">Add</span>
-									</div>
-								</div>
-									<ul id="myUL">
-							
-									</ul>
-                                -->
-								</div> 
                             
+                                    </ul>
+                                </div> -->
+                                
+                                <div class="card-footer justify-content-center">
+                                    <button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal(); location.href='/home'">Get Started</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-								
-								<div class="card-footer justify-content-center">
-									<button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal(); location.href='/home'">Get Started</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+
+
+        </div>
+    </div>
 
 
 
-
-
-		</div>
-	</div>
-
-
-
-	<!-- JSFILES -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/components.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
-	<script src="routes/add_projects.js"></script>
-	<script>
+    <!-- JSFILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="routes/add_projects.js"></script>
+    <script>
 
 //new task
 function newElement() {
-	var li = document.createElement("li");
-	var inputValue = document.getElementById("myInput").value;
-	var t = document.createTextNode(inputValue);
-	li.appendChild(t);
-	if (inputValue === '') {
-		alert("You must write something!");
-	} else {
-		document.getElementById("myUL").appendChild(li);
-	}
-	document.getElementById("myInput").value = "";
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
 
   /*var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -166,10 +147,10 @@ function newElement() {
   li.appendChild(span);*/
 
   for (i = 0; i < close.length; i++) {
-  	close[i].onclick = function() {
-  		var div = this.parentElement;
-  		div.style.display = "none";
-  	}
+    close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
   }
 }
 
@@ -183,70 +164,68 @@ if (typeof(Storage) !== "undefined") {
     // Store
     function saveLocal(){
 
-    	console.log("hi");
-    	var thisName = document.getElementById("projName").value;
-    	var thisForm = document.getElementById("artForm").value;
+        console.log("hi");
+        var thisName = document.getElementById("projName").value;
+        var thisForm = document.getElementById("artForm").value;
     //var thisDate = document.getElementById("dueDate").value;
-        var thisDescription = document.getElementById("description").value;
-    
-    var arr = document.getElementById("myUL");
+    var thisDescription = document.getElementById("description").value;
+    /*var arr = document.getElementById("myUL");
     //console.log(typeof(arr));
     var li = arr.getElementsByTagName('li');
     var thisList = new Array();
     for (var i=0; i<li.length; i++){
-    	thisList.push(li[i].innerText)
-    }
-
-    console.log(JSON.stringify(thisList));
+        thisList.push(li[i].innerText)
+    }*/
+    //console.log(JSON.stringify(thisList));
 
 
     //if item in project already exists
     if (localStorage.projName){
 
-    	console.log("hi again");
-    	var storedNames = JSON.parse(localStorage.getItem("projName"));
-    	storedNames.push(thisName);
+        console.log("hi again");
+        var storedNames = JSON.parse(localStorage.getItem("projName"));
+        storedNames.push(thisName);
 
-    	var artForm = JSON.parse(localStorage.getItem("artForm"));
-    	artForm.push(thisForm);
+        var artForm = JSON.parse(localStorage.getItem("artForm"));
+        artForm.push(thisForm);
 
-    	//var dueDate = JSON.parse(localStorage.getItem("dueDate"));
-    	//dueDate.push(thisDate);
+        //var dueDate = JSON.parse(localStorage.getItem("dueDate"));
+        //dueDate.push(thisDate);
 
-    	var description = JSON.parse(localStorage.getItem("description"));
-    	description.push(thisDescription);
+        var description = JSON.parse(localStorage.getItem("description"));
+        description.push(thisDescription);
 
-    	var taskList = JSON.parse(localStorage.getItem("taskList"));
-    	//taskList.push("");
+        //var taskList = JSON.parse(localStorage.getItem("taskList"));
+        //taskList.push(thisList);
     }else{
-		//if completely new project
-		var storedNames = [];
-		storedNames[0] = thisName;
+        //if completely new project
+        var storedNames = [];
+        storedNames[0] = thisName;
 
-		var artForm = [];
-		artForm[0] = thisForm;
+        var artForm = [];
+        artForm[0] = thisForm;
 
-		//var dueDate = [];
-		//dueDate[0] = thisDate;
+        //var dueDate = [];
+        //dueDate[0] = thisDate;
 
-		var description = [];
-		description[0] = thisDescription;
+        var description = [];
+        description[0] = thisDescription;
 
-		var taskList = [];
-		taskList[0] = "";
-	}
+        //var taskList = [];
+        //taskList[0] = thisList;
+    }
 
-	//stores into localStorage as a string
-	console.log("hi");
-	localStorage.setItem("projName", JSON.stringify(storedNames));
-	localStorage.setItem("artForm", JSON.stringify(artForm));
+    //stores into localStorage as a string
+    console.log("hi");
+    localStorage.setItem("projName", JSON.stringify(storedNames));
+    localStorage.setItem("artForm", JSON.stringify(artForm));
     //localStorage.setItem("dueDate", JSON.stringify(dueDate));
     localStorage.setItem("description", JSON.stringify(description));
-    localStorage.setItem("taskList", JSON.stringify(taskList));
+    //localStorage.setItem("taskList", JSON.stringify(taskList));
     // Retrieve
 }
 } else {
-	document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
 </script>
 
