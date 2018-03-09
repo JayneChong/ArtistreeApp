@@ -121,7 +121,7 @@
 
 <!-- JS DATE PICKER -->
 <script>
-  <script>
+  //<script>
   $(document).ready(function() {
      materialKitDemo.initFormExtendedDatetimepickers();
      var slider = document.getElementById('sliderRegular');
@@ -146,7 +146,7 @@
      });
  });
 </script>
-</script>
+
 <!-- END JS DATE PICKER -->
 
 
@@ -162,14 +162,14 @@ if (typeof(Storage) !== "undefined") {
     	var thisName = document.getElementById("entryTitle").value;
     	var thisDate = document.getElementById("entryDate").value;
         var thisContent = document.getElementById("content").value;
-    /*var arr = document.getElementById("myUL");
+    var arr = document.getElementById("myUL");
     //console.log(typeof(arr));
     var li = arr.getElementsByTagName('li');
     var thisList = new Array();
     for (var i=0; i<li.length; i++){
     	thisList.push(li[i].innerText)
-    }*/
-    //console.log(JSON.stringify(thisList));
+    }
+    console.log(JSON.stringify(thisList));
 
 
     //if item in project already exists
@@ -188,8 +188,8 @@ if (typeof(Storage) !== "undefined") {
     	var content = JSON.parse(localStorage.getItem("content"));
     	content.push(thisContent);
 
-    	//var taskList = JSON.parse(localStorage.getItem("taskList"));
-    	//taskList.push(thisList);
+    	var taskList = JSON.parse(localStorage.getItem("taskList"));
+    	taskList.push(thisList);
     }else{
 		//if completely new project
 		var storedNames = [];
@@ -201,8 +201,8 @@ if (typeof(Storage) !== "undefined") {
 		var content = [];
 		content[0] = thisContent;
 
-		//var taskList = [];
-		//taskList[0] = thisList;
+		var taskList = [];
+		taskList[0] = thisList;
 	}
 
 	//stores into localStorage as a string
@@ -210,7 +210,7 @@ if (typeof(Storage) !== "undefined") {
 	localStorage.setItem("entryTitle", JSON.stringify(storedNames));
     localStorage.setItem("entryDate", JSON.stringify(entryDate));
     localStorage.setItem("content", JSON.stringify(content));
-    //localStorage.setItem("taskList", JSON.stringify(taskList));
+    localStorage.setItem("taskList", JSON.stringify(taskList));
     // Retrieve
 }
 } else {

@@ -70,22 +70,11 @@
         						<div class="form-group">
         							<label for="artForm">Art Form</label>
         							<select class="form-control" id="artForm">
-        								<option>Photography</option>
+        								<option>Pick Your Art</option>
+                                        <option>Photography</option>
         								<option>Music</option>
         							</select>
         						</div>
-
-
-                            <div class="task">
-                                    <div id="myDIV" class="header">
-                                        <h5>Tasks to Complete</h5>
-                                        <input type="text" id="myInput" placeholder="Tasks...">
-                                        <span onclick="newElement()" class="btn btn-primary btn-sm">Add</span>
-                                    </div>
-                                </div>
-                                    <ul id="myUL">
-                                    </ul>
-
         						
         						<br>
 
@@ -100,9 +89,7 @@
 										<textarea class="form-control" id="description" rows="3"></textarea>
 									</div>  
 
-
-<!--
- 								<div class="task">
+<!-- 								<div class="task">
 									<div id="myDIV" class="header">
   										<h5>Tasks to Complete</h5>
   										<input type="text" id="myInput" placeholder="Tasks...">
@@ -112,12 +99,7 @@
 									<ul id="myUL">
 							
 									</ul>
-                                -->
-								</div> 
-                            
-
-
-
+								</div> -->
 								
 								<div class="card-footer justify-content-center">
 									<button type="button" id="input" class="btn btn-link btn-primary btn-lg" onclick="saveLocal(); location.href='/home'">Get Started</button>
@@ -144,7 +126,6 @@
 	<script src="js/bootstrap-datetimepicker.min.js"></script>
 	<script src="routes/add_projects.js"></script>
 	<script>
-
 //new task
 function newElement() {
 	var li = document.createElement("li");
@@ -157,13 +138,11 @@ function newElement() {
 		document.getElementById("myUL").appendChild(li);
 	}
 	document.getElementById("myInput").value = "";
-
   /*var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);*/
-
   for (i = 0; i < close.length; i++) {
   	close[i].onclick = function() {
   		var div = this.parentElement;
@@ -171,9 +150,6 @@ function newElement() {
   	}
   }
 }
-
-
-
 </script>
 
 <script>
@@ -181,67 +157,52 @@ function newElement() {
 if (typeof(Storage) !== "undefined") {
     // Store
     function saveLocal(){
-
     	console.log("hi");
     	var thisName = document.getElementById("projName").value;
     	var thisForm = document.getElementById("artForm").value;
     //var thisDate = document.getElementById("dueDate").value;
-        var thisDescription = document.getElementById("description").value;
-    
-    var arr = document.getElementById("myUL");
+    var thisDescription = document.getElementById("description").value;
+    /*var arr = document.getElementById("myUL");
     //console.log(typeof(arr));
     var li = arr.getElementsByTagName('li');
     var thisList = new Array();
     for (var i=0; i<li.length; i++){
     	thisList.push(li[i].innerText)
-    }
-
-    console.log(JSON.stringify(thisList));
-
-
+    }*/
+    //console.log(JSON.stringify(thisList));
     //if item in project already exists
     if (localStorage.projName){
-
     	console.log("hi again");
     	var storedNames = JSON.parse(localStorage.getItem("projName"));
     	storedNames.push(thisName);
-
     	var artForm = JSON.parse(localStorage.getItem("artForm"));
     	artForm.push(thisForm);
-
     	//var dueDate = JSON.parse(localStorage.getItem("dueDate"));
     	//dueDate.push(thisDate);
-
     	var description = JSON.parse(localStorage.getItem("description"));
     	description.push(thisDescription);
-
-    	var taskList = JSON.parse(localStorage.getItem("taskList"));
-    	//taskList.push("");
+    	//var taskList = JSON.parse(localStorage.getItem("taskList"));
+    	//taskList.push(thisList);
     }else{
 		//if completely new project
 		var storedNames = [];
 		storedNames[0] = thisName;
-
 		var artForm = [];
 		artForm[0] = thisForm;
-
 		//var dueDate = [];
 		//dueDate[0] = thisDate;
-
 		var description = [];
 		description[0] = thisDescription;
-
-		var taskList = [];
-		taskList[0] = "";
+		//var taskList = [];
+		//taskList[0] = thisList;
 	}
-
 	//stores into localStorage as a string
 	console.log("hi");
 	localStorage.setItem("projName", JSON.stringify(storedNames));
 	localStorage.setItem("artForm", JSON.stringify(artForm));
     //localStorage.setItem("dueDate", JSON.stringify(dueDate));
     localStorage.setItem("description", JSON.stringify(description));
-    localStorage.setItem("taskList", JSON.stringify(taskList));
+    //localStorage.setItem("taskList", JSON.stringify(taskList));
     // Retrieve
 }
 } else {
