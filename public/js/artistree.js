@@ -1,3 +1,89 @@
+//--------------- GOOGLE ANALYTICS -----------------
+
+$(document).ready(function() {
+  initializePage();
+  $('.addbtn').click(function(e) {
+    ga('send', 'event', 'add', 'click')
+  });
+});
+
+/*
+ * Function that is called when the document is ready.
+ */
+ function initializePage() {
+  // your code here
+}
+
+// --------------- TASK --------------------------
+
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+function saveTasks(p){
+ var arr = document.getElementById("myUL"+p);
+            //console.log(typeof(arr));
+            var li = arr.getElementsByTagName('li');
+            var thisList = new Array();
+            for (var i=0; i<li.length; i++){
+              thisList.push(li[i].innerText)
+            }
+            var taskList = JSON.parse(localStorage.getItem("taskList"));
+            taskList[p]= thisList;
+            localStorage.setItem("taskList", JSON.stringify(taskList));
+          }
+
 //---------------- LOCAL STORAGE --------------------
 
 const form = document.querySelector('form');
@@ -36,91 +122,91 @@ clearButton.addEventListener('click', function () {
 });
 
 //-------------- get current date / DATE PICKER----------------
-    var dt = new Date();
-    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 
 $('.datetimepicker').datetimepicker({
-    icons: {
-        time: "fa fa-clock-o",
-        date: "fa fa-calendar",
-        up: "fa fa-chevron-up",
-        down: "fa fa-chevron-down",
-        previous: 'fa fa-chevron-left',
-        next: 'fa fa-chevron-right',
-        today: 'fa fa-screenshot',
-        clear: 'fa fa-trash',
-        close: 'fa fa-remove'
-    }
+  icons: {
+    time: "fa fa-clock-o",
+    date: "fa fa-calendar",
+    up: "fa fa-chevron-up",
+    down: "fa fa-chevron-down",
+    previous: 'fa fa-chevron-left',
+    next: 'fa fa-chevron-right',
+    today: 'fa fa-screenshot',
+    clear: 'fa fa-trash',
+    close: 'fa fa-remove'
+  }
 });
 
 //-------------- LOGIN: currently incomplete -----------------
 
 function login() {
  var email = $('#email').val();
-    var password = $('#password').val();
-    $.post('/login', {email: email, password: password}, function(data, err) {
-      console.log(data);
-      window.location.href = "/home";
-    })
-    .fail(function(err) {
-      showFormError(
-        {
-          title: "Error",
-          text: err.responseText
-        }
-
-      );
-      console.log(err.responseText);
-    });
+ var password = $('#password').val();
+ $.post('/login', {email: email, password: password}, function(data, err) {
+  console.log(data);
+  window.location.href = "/home";
+})
+ .fail(function(err) {
+  showFormError(
+  {
+    title: "Error",
+    text: err.responseText
   }
 
-  $("#login-btn").click(function(e) {
+  );
+  console.log(err.responseText);
+});
+}
+
+$("#login-btn").click(function(e) {
+  login();
+});
+
+$('#password').keypress(function (e) {
+  var key = e.which;
+  if(key == 13 &&  okPressed) 
+  {
+    okPressed = false;
     login();
+    return false;
+  }
+});
+
+$("#register-btn").click(function(e) {
+  var name = $('#reg-name').val();
+  var email = $('#reg-email').val();
+  var password = $('#reg-password').val();
+  if (name == "") {
+    showFormError({title: "Error", text: "Please enter a name"});
+    return;
+  } else if (email == "") {
+    showFormError({title: "Error", text: "Please enter an email."});
+    return;
+  } else if (password == "") {
+    showFormError({title: "Error", text: "Please enter a password."});
+    return;
+  }
+  $.post('/register', {
+    name: name,
+    email: email
+    password: password,
+
+  }, function(data) {
+    console.log("Successfully created an account!");
+    showSuccess({title: "Success!", text: "Sign up success!"});
+
+  }).fail(function(err) {
+    showFormError({title: "Error", text: "Email already exists!"});
+    console.log("Email already exists!");
   });
 
-  $('#password').keypress(function (e) {
-    var key = e.which;
-    if(key == 13 &&  okPressed) 
-    {
-      okPressed = false;
-      login();
-      return false;
-    }
-  });
 
-    $("#register-btn").click(function(e) {
-    var name = $('#reg-name').val();
-    var email = $('#reg-email').val();
-    var password = $('#reg-password').val();
-    if (name == "") {
-      showFormError({title: "Error", text: "Please enter a name"});
-      return;
-    } else if (email == "") {
-      showFormError({title: "Error", text: "Please enter an email."});
-      return;
-    } else if (password == "") {
-      showFormError({title: "Error", text: "Please enter a password."});
-      return;
-    }
-    $.post('/register', {
-      name: name,
-      email: email
-      password: password,
-      
-    }, function(data) {
-      console.log("Successfully created an account!");
-      showSuccess({title: "Success!", text: "Sign up success!"});
+});
 
-    }).fail(function(err) {
-      showFormError({title: "Error", text: "Email already exists!"});
-      console.log("Email already exists!");
-    });
-
-
-  });
-
-  $('#email').keypress(function (e) {
-    var key = e.which;
+$('#email').keypress(function (e) {
+  var key = e.which;
     if(key == 13 & okPressed)  // the enter key code
     {
       okPressed = false;
@@ -177,18 +263,18 @@ function updateImageDisplay() {
 }
 
 var fileTypes = [
-  'image/jpeg',
-  'image/pjpeg',
-  'image/png'
-  'image/jpg'
-  'image/gif'
-  'audio/mp3'
-  'audio/ogg'
-  'audio/wav'
-  'video/mp4'
-  'video/ogg'
-  'video/wmv'
-  'video/avi'
+'image/jpeg',
+'image/pjpeg',
+'image/png'
+'image/jpg'
+'image/gif'
+'audio/mp3'
+'audio/ogg'
+'audio/wav'
+'video/mp4'
+'video/ogg'
+'video/wmv'
+'video/avi'
 ]
 
 function validFileType(file) {

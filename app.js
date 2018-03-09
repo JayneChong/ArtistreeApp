@@ -19,9 +19,9 @@ var add_projects = require('./routes/add_projects');
 var add_entries = require('./routes/add_entries');
 
 
-var homeTest = require('./routes/homeTest');
-var add_projectsTest = require('./routes/add_projectsTest');
-var add_entriesTest = require('./routes/add_entriesTest');
+var home_B = require('./routes/home_B');
+var addProjects_B = require('./routes/addProjects_B');
+var addEntries_B = require('./routes/addEntries_B');
 
 
 var app = express();
@@ -55,9 +55,9 @@ app.get('/collection', collection.view);
 app.get('/add_projects', add_projects.view);
 app.get('/add_entries', add_entries.view);
 
-app.get('/homeTest', homeTest.view);
-app.get('/add_projectsTest', add_projectsTest.view);
-app.get('/add_entriesTest', add_entriesTest.view);
+app.get('/home_B', home_B.view);
+app.get('/addProjects_B', addProjects_B.view);
+app.get('/addEntries_B', addEntries_B.view);
 
 
 

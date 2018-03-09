@@ -1,3 +1,3 @@
 exports.view = function(req, res){
-   res.render('homeTest');
+   res.render('addProjects_B');
  };
