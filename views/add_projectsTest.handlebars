@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ARTISTREE [ADD]</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/materials.css">
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav>
+		<div class=" card card-nav-tabs card-plain">
+			<div class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg card-header card-header-success">
+				<div class="nav-tabs-navigation">
+					<div class="nav-tabs-wrapper">
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<li class="nav-item">
+								<a class="nav-link " href="/home" data-toggle="/home">Home</a>
+							</li>
+
+<!--                             <li class=" dropdown nav-item">
+                                <a href="/add" class="dropdown-toggle nav-link" data-toggle="dropdown">ADD</a>
+                                <div class="dropdown-menu">
+                                    <a href="/add_projects" class="dropdown-item">Add Projects</a>
+                                </div> -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/add_projects" data-toggle="/add_projects">add</a>
+                                </li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/" data-toggle="/">logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav> <br>
+		<!-- Navigation Bar END -->
+
+
+
+		<!-- FORM -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 ml-auto mr-auto">
+					<div class="card card-signup">
+						<form class="form" method="" action="">
+							<p class="text-divider">Get started on your project!</p>
+							<div class="card-body">
+
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Project Name</label>
+									
+									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. Engagement Shoot">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Art Form</label>
+									<select class="form-control" id="exampleFormControlSelect1">
+										<option>Photography</option>
+										<option>Music</option>
+									</select>
+								</div>
+								
+								<br>
+
+<!-- 								<div class="input-group">
+									<label for="exampleFormControlSelect1">Duedate</label>
+									
+									<input type="text" class="form-control datetimepicker" value="01/01/2018"> </div>
+
+
+									<br><br> -->
+
+									<div class="form-group">
+										<label for="exampleFormControlTextarea1">Description</label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+									</div>  
+
+<!-- 								<div class="task">
+									<div id="myDIV" class="header">
+  										<h5>Tasks to Complete</h5>
+  										<input type="text" id="myInput" placeholder="Tasks...">
+  										<span onclick="newElement()" class="btn btn-primary btn-sm">Add</span>
+									</div>
+								</div>
+
+									<ul id="myUL">
+							
+									</ul>
+								</div> -->
+								
+								<div class="card-footer justify-content-center">
+									<a id="input" class="btn btn-link btn-primary btn-lg">Get Started</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+	<!-- JSFILES -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/components.js"></script>
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<script src="routes/add_projects.js"></script>
+	<script>
+		$(document).ready(function() {
+			materialKitDemo.initFormExtendedDatetimepickers();
+            // Sliders for demo purpose in refine cards section
+            var slider = document.getElementById('sliderRegular');
+
+            noUiSlider.create(slider, {
+            	start: 40,
+            	connect: [true, false],
+            	range: {
+            		min: 0,
+            		max: 100
+            	}
+            });
+
+            var slider2 = document.getElementById('sliderDouble');
+
+            noUiSlider.create(slider2, {
+            	start: [20, 60],
+            	connect: true,
+            	range: {
+            		min: 0,
+            		max: 100
+            	}
+            });
+        });
+
+
+</script>
+
+</body>
+
+
+
+</html>

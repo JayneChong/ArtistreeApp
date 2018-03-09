@@ -20,6 +20,8 @@ var add_entries = require('./routes/add_entries');
 
 
 var homeTest = require('./routes/homeTest');
+var add_projectsTest = require('./routes/add_projectsTest');
+var add_entriesTest = require('./routes/add_entriesTest');
 
 
 var app = express();
@@ -54,6 +56,9 @@ app.get('/add_projects', add_projects.view);
 app.get('/add_entries', add_entries.view);
 
 app.get('/homeTest', homeTest.view);
+app.get('/add_projectsTest', add_projectsTest.view);
+app.get('/add_entriesTest', add_entriesTest.view);
+
 
 
 http.createServer(app).listen(app.get('port'), function(){
