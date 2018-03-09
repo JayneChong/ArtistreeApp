@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/materials.css">
-
-
 </head>
 
 <body>
@@ -23,7 +21,7 @@
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" data-tabs="tabs">
                             <li class="nav-item">
-                                <a class="nav-link addbtn active" href="/home" data-toggle="tab">Home</a>
+                                <a class="nav-link active" href="/home" data-toggle="tab">Home</a>
                             </li>
 
 <!--                             <li class=" dropdown nav-item">
@@ -33,11 +31,11 @@
                                 </div> -->
 
                                 <li class="nav-item">
-                                    <a class="nav-link addbtn" href="/add_projects" data-toggle="/add_projects">add</a>
+                                    <a class="nav-link" href="/add_projects" data-toggle="/add_projects">add</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link addbtn" href="/collection" data-toggle="/collection">collection</a>
+                                    <a class="nav-link" href="/collection" data-toggle="/collection">collection</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/" data-toggle="/">logout</a>
@@ -55,9 +53,8 @@
         <center>
 
             <h1 class="title" style="color: #2fd889"> ARTISTREE </h1>
-        </center>
 
-        <center>
+
             <br><br>
             <div class="main main-raised"> 
                 <div class="container">
@@ -69,25 +66,6 @@
 
                     <h2> ACTIVE PROJECTS </h2>
 
-<<<<<<< HEAD
-                    <!-- Add Art Form Field -->
-=======
-<!-- Add Art Form Field -->
->>>>>>> 2f292d65c3e22da438799ce9733e9d0c331d63e7
-                    <div class = "row">
-                        <div class="form-group col">
-
-                            <span class="newArt saveArt artform"></span>
-                            <input type="text" class="form-control artform" placeholder=" New Art Form"> 
-
-                        </div>
-
-                        <button class="btn btn-success btn-round" id="add-art" value={{artId}}>
-                            <strong> ＋ </strong>
-                        </button> 
-                    </div>
-
-
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-primary">
                             <div class="nav-tabs-navigation">
@@ -97,11 +75,11 @@
 
                                         <li class="nav-item">
                                             <a class="nav-link active" href="#art" data-toggle="tab">
-                                               ALL
-                                           </a>
-                                       </li>
+                                             ALL
+                                         </a>
+                                     </li>
 
-                                       <li class="nav-item">
+                                     <li class="nav-item">
                                         <a class="nav-link" href="#art1" data-toggle="tab">
                                             Photography
                                         </a>
@@ -126,7 +104,7 @@
                                 <ul id="projList">
 
                                     <li>
-                                     <div class="row">
+                                       <div class="row">
                                         <div class="col-lg-4 col-md-6">
                                             <button class="btn btn-block  btn-info " data-toggle="modal" data-target="#projectA">
                                                 Engagement Shoot
@@ -174,18 +152,96 @@
             </div>
 
 
+
+            <!-- +++++++++++++++++++++++++++ C O M P L E T E D  Projects TABS ++++++++++++++++++++++++++++++ -->
+            <h2> COMPLETED PROJECTS </h2>
+
+            <div class="card card-nav-tabs">
+                <div class="card-header card-header-default">
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+                            <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#c-art" data-toggle="tab">
+                                     ALL
+                                 </a>
+                             </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" href="#c-art1" data-toggle="tab">
+                                    Photography
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#c-art2" data-toggle="tab">
+                                    Music
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- +++++++++++++++++++++++++++ C O M P L E T E D  Projects LIST ++++++++++++++++++++++++++++++ -->
+            <div class="card-body ">
+                <div class="tab-content text-center">
+                    <div class="tab-pane active" id="c-art">
+
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#projectA">
+                                    Engagement Shoot 0
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#projectB">
+                                    Learn Guitar Basics 0
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="tab-pane" id="c-art1">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+
+                                <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#projectA">
+                                    Engagement Shoot 0
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="c-art2">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <button class="btn btn-block  btn-primary " data-toggle="modal" data-target="#projectB">
+                                    Learn Guitar Basics 0
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-<<<<<<< HEAD
-    </div>  
-=======
 
         <!-- +++++++++++++++++++++++++++ E N D COMPLETE  Projects LIST ++++++++++++++++++++++++++++++ -->
+
 
 
     </div>
 </div>  
 </div>
->>>>>>> 2f292d65c3e22da438799ce9733e9d0c331d63e7
 </center>
 
 
@@ -193,9 +249,6 @@
 <!-- Floating Modal -->
 <ul id="modalList">
 
-<<<<<<< HEAD
-    
-=======
 <li>
 <div class="modal fade" id="projectA" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -206,22 +259,6 @@
                     <!--<i class="material-icons">x</i> -->
                 </button>
             </div>
-
-
-<!-- Task list -->
-
-            <div class="task">
-                                    <div id="myDIV" class="header">
-                                        <h5>Tasks to Complete</h5>
-                                        <input type="text" id="myInput" placeholder="Tasks...">
-                                        <span onclick="newElement()" class="btn btn-primary btn-sm">Add</span>
-                                    </div>
-                                </div>
-                                    <ul id="myULA">
-                                    </ul>
-
-
-
             <div class="modal-body">
                 <h3> Location scouting </h3>
                 <h4> January 1, 2018 </h4>
@@ -233,14 +270,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link btn-success btn-danger pull-left" onclick="deleteProject();" >Delete Project</button>
-
-                <button type="button" class="btn btn-link btn-success"onclick="location.href='/add_entries'" >Add Progress</button>
-                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-
                 <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'" >Add Progress</button>
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close
                 </button>
-
             </div>
         </div>
     </div>
@@ -280,34 +312,19 @@
 
 
 
+<!-- ++++++++++++++++++++++ COMPLETED PROJECT F L O A T I N G    M O D A L +++++++++++++++++++++++++++ -->
+
     <li>
->>>>>>> 2f292d65c3e22da438799ce9733e9d0c331d63e7
         <div class="modal fade" id="projectA" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Engagement Shoot</h5>
-                        <br> <hr> <br> 
-    
-
-                 <!-- Task list -->
-<!--                    <div class="task">
-                        <div id="myDIV" class="header">
-                            <h5>Tasks to Complete</h5> 
-                            <input type="text" id="myInput" placeholder="Tasks...">
-                            <span onclick="newElement()" class="btn btn-primary btn-sm" >Add</span>
-                        </div>
-                    </div>
-                    <ul id="myUL"></ul> 
-
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        </button> -->
-
-
+                            <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                        </button>
                     </div>
-
-
-
                     <div class="modal-body">
                         <h3> Location scouting </h3>
                         <h4> January 1, 2018 </h4>
@@ -318,16 +335,17 @@
                         <br> <hr>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-success btn-danger pull-left" onclick="deleteProject();" >Delete Project</button>
-                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'" >Add Progress</button>
-                        <button type="button" class="btn btn-link" data-dismiss="modal">Close
-                        </button>
-
+                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
+                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-    
+    </li>
+
+
+<!-- ++++++++++++++++++++++++++++++++++ END COMPLETE PROJ FLOATING MODAL +++++++++++++++++++++++++++++++ -->
+
 
     <li>
         <div class="modal fade" id="projectB" tabindex="-1" role="dialog">
@@ -339,7 +357,6 @@
                             <i class="material-icons">x</i>
                         </button>
                     </div>
-
                     <div class="modal-body">
 
                         <h3> 2 Hour Practice </h3>
@@ -353,186 +370,10 @@
                           </p> 
                           <hr>
                       </div>
-
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-success btn-danger pull-left" onclick="deleteProject();" >Delete Project</button>
-                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'" >Add Progress</button>
+                        <button type="button" class="btn btn-link btn-success" onclick="location.href='/add_entries'">Add Progress</button>
                         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
                     </div>
-<<<<<<< HEAD
-                </ul>
-
-
-
-            </body>
-
-            <script src="js/jquery.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/components.js"></script>
-            <script src="js/artistree.js"></script>
-
-
-
-
-        <script>
-        //localStorage.clear();
-        //displaying the storage onto active projects
-        var projectsArray = JSON.parse(localStorage.getItem("projName"));
-        var formsArray = JSON.parse(localStorage.getItem("artForm"));
-        var descArray = JSON.parse(localStorage.getItem("description"));
-        //making new buttons everytime new project is created
-        for (var i=0; i<projectsArray.length; i++){
-            var thisName = projectsArray[i];
-            var thisForm = formsArray[i];
-            var thisDesc = descArray[i];
-            var li = document.createElement("li");
-        //.createElement creates the individual element to make it look pretty
-        var div1 = document.createElement("div");
-        div1.className = "row";
-        var div2 = document.createElement("div");
-        div2.className = "col-lg-4 col-md-6";
-        var button = document.createElement("button");
-        button.className = "btn btn-block  btn-info";
-        button.setAttribute("data-toggle", "modal");
-        button.setAttribute("data-target", "#project"+i);
-        var t = document.createTextNode(thisName);
-        button.appendChild(t);
-        div2.appendChild(button);
-        div1.appendChild(div2);
-        li.appendChild(div1);
-        document.getElementById("projList").appendChild(li);
-        console.log("proj list worked");
-        //floating modal starting here
-        var liM = document.createElement("li");
-        var div1M = document.createElement("div");
-        div1M.className = "modal fade";
-        div1M.setAttribute("id", "project"+i);
-        div1M.setAttribute("tabindex", "-1");
-        div1M.setAttribute("role", "dialog");
-        var div2M = document.createElement("div");
-        div2M.className = "modal-dialog";
-        div2M.setAttribute("role", "document");
-        var div3M = document.createElement("div");
-        div3M.className = "modal-content";
-        var div4M = document.createElement("div");
-        div4M.className = "modal-header";
-        var h5M = document.createElement("h2");
-        h5M.className = "modal-title";
-        var tM = document.createTextNode(thisName);
-            /*var buttonM = document.createElement("button");
-            buttonM.className = "close";
-            buttonM.setAttribute("type", "button");
-            buttonM.setAttribute("data-dismiss", "modal");
-            buttonM.setAttribute("aria-label", "Close"); */
-            var iM = document.createElement("i");
-            iM.className = "material-icons";
-            var iMtext = document.createTextNode("x");
-        
-        //task list 
-        // var div1Tasks = document.createElement("div");
-        // div1Tasks.className = "task";
-        // var div2Tasks = document.createElement("div");
-        // div2Tasks.setAttribute("id", "myDIV");
-        // div2Tasks.className = "header";
-        // var h5Tasks = document.createElement("h5");
-        // h5Tasks = document.createTextNode("Tasks to Complete");
-        // var inputTasks = document.createElement("input");
-        // inputTasks.setAttribute("type", "text");
-        // inputTasks.setAttribute("id", "myInput");
-        // inputTasks.setAttribute("placeholder", "Tasks...");
-        // var spanTasks = document.createElement("span");
-        // spanTasks.setAttribute("onclick", "newElement()");
-        // spanTasks.className = "btn btn-primary btn-sm";
-        // spanTasks = document.createTextNode("Add");
-        // var ulTasks = document.createElement("ul");
-        // ulTasks.setAttribute("id", "myUL"+i);
-        // div2Tasks.appendChild(h5Tasks);
-        // div2Tasks.appendChild(inputTasks);
-        // div2Tasks.appendChild(spanTasks);
-        // div1Tasks.appendChild(div2Tasks);
-        // liM.appendChild(div1Tasks);
-
-        //
-        var div5M = document.createElement("div");
-        div5M.className = "modal-body";
-        var h3M = document.createElement("h3");
-        var h3M = document.createTextNode(thisDesc);
-        var div6M = document.createElement("div");
-        div6M.className = "modal-footer"; 
-        var buttonM = document.createElement("button");
-        buttonM.setAttribute("type", "button");
-        buttonM.setAttribute("onclick", "deleteProject("+i+");");
-        buttonM.className = "btn btn-link btn-success btn-danger";
-        buttonM.setAttribute("data-dismiss", "modal");
-        var buttonMtext = document.createTextNode("Delete Project");
-        var button2M = document.createElement("button");
-        button2M.setAttribute("type", "button");
-        button2M.setAttribute("onclick", "location.href='/add_entries'");
-        button2M.className = "btn btn-link btn-success";
-        var button2Mtext = document.createTextNode("Add Progress");
-        var button3M = document.createElement("button");
-        button3M.className = "btn btn-link";
-        button3M.setAttribute("type", "button");
-        button3M.setAttribute("data-dismiss", "modal");
-        button3M.setAttribute("onclick", "saveTasks("+i+");");
-        var button3Mtext = document.createTextNode("Close");
-        //title name, x
-            /*iM.appendChild(iMtext);
-            buttonM.appendChild(iM);*/
-            h5M.appendChild(tM);
-            div4M.appendChild(h5M);
-            //div4M.appendChild(buttonM);
-        //description
-        div5M.appendChild(h3M);
-        //Add Progress, close
-        buttonM.appendChild(buttonMtext);
-        button2M.appendChild(button2Mtext);
-        button3M.appendChild(button3Mtext);
-        div6M.appendChild(buttonM);
-        div6M.appendChild(button2M);
-        div6M.appendChild(button3M);
-        //combining all content
-        div3M.appendChild(div4M);
-        div3M.appendChild(div5M);
-        div3M.appendChild(div6M);
-        div2M.appendChild(div3M);
-        div1M.appendChild(div2M);
-        liM.appendChild(div1M);
-        document.getElementById("modalList").appendChild(liM);
-        console.log(document.getElementById("modalList").getElementsByTagName("li").length);
-        }
-        function deleteProject(p){
-            if (p !== undefined){
-                projectsArray.splice(p,1);
-                formsArray.splice(p,1);
-                descArray.splice(p,1);
-                localStorage.setItem("projName", JSON.stringify(projectsArray));
-                localStorage.setItem("artForm", JSON.stringify(formsArray));
-                localStorage.setItem("description", JSON.stringify(descArray));
-                document.getElementById("projList").children[p+2].style.display = "none";
-                console.log("deleting..");
-            //localStorage.removeItem();
-            //var thisName = document.getElementById("projName").value;
-        }
-        }
-        //this gets individual elements in the array
-        //document.getElementById("result").innerHTML = projectsArray[0];
-        //document.getElementById("result1").innerHTML = projectsArray[1];
-            /*if (localStorage.projName){
-                document.getElementById("result").innerHTML = localStorage.getItem("projName");
-                document.getElementById("result1").innerHTML = localStorage.getItem("artForm");
-                //document.getElementById("result2").innerHTML = localStorage.getItem("dueDate");
-                document.getElementById("result3").innerHTML = localStorage.getItem("description");
-                //document.getElementById("result4").innerHTML = localStorage.getItem("taskList");
-            }*/
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
-        </script>
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115253314-1"></script>
-=======
                 </div>
             </div>
         </div>
@@ -541,104 +382,34 @@
 <!--  End Modal -->
 
 <!--- date/time --> 
-
-
 <script>
-
-//new task
-function newElement() {
-    var li = document.createElement("li");
-    var input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(input);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("You must write something!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-
-
-  /*var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);*/
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-  }
-}
-
-function saveTasks(p){
- var arr = document.getElementById("myUL"+p);
-    //console.log(typeof(arr));
-    var li = arr.getElementsByTagName('li');
-    var thisList = new Array();
-    for (var i=0; i<li.length; i++){
-        thisList.push(li[i].innerText)
-    }
-
-    var taskList = JSON.parse(localStorage.getItem("taskList"));
-    taskList[p]= thisList;
-    localStorage.setItem("taskList", JSON.stringify(taskList));
-}
-
-
-</script>
-
-
->>>>>>> 2f292d65c3e22da438799ce9733e9d0c331d63e7
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-<<<<<<< HEAD
-  gtag('config', 'UA-115253314-1');
-=======
 //localStorage.clear();
-
 //displaying the storage onto active projects
 var projectsArray = JSON.parse(localStorage.getItem("projName"));
 var formsArray = JSON.parse(localStorage.getItem("artForm"));
 var descArray = JSON.parse(localStorage.getItem("description"));
-
 //making new buttons everytime new project is created
 for (var i=0; i<projectsArray.length; i++){
     var thisName = projectsArray[i];
     var thisForm = formsArray[i];
     var thisDesc = descArray[i];
     var li = document.createElement("li");
-
 //.createElement creates the individual element to make it look pretty
-
     var div1 = document.createElement("div");
     div1.className = "row";
-
     var div2 = document.createElement("div");
     div2.className = "col-lg-4 col-md-6";
-
     var button = document.createElement("button");
     button.className = "btn btn-block  btn-info";
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#project"+i);
-
     var t = document.createTextNode(thisName);
     button.appendChild(t);
     div2.appendChild(button);
     div1.appendChild(div2);
     li.appendChild(div1);
     document.getElementById("projList").appendChild(li);
-    console.log("proj list worked");
-
-
+    console.log("proj list worked")
 //floating modal starting here
     var liM = document.createElement("li");
     var div1M = document.createElement("div");
@@ -646,103 +417,52 @@ for (var i=0; i<projectsArray.length; i++){
     div1M.setAttribute("id", "project"+i);
     div1M.setAttribute("tabindex", "-1");
     div1M.setAttribute("role", "dialog");
-
     var div2M = document.createElement("div");
     div2M.className = "modal-dialog";
     div2M.setAttribute("role", "document");
-
     var div3M = document.createElement("div");
     div3M.className = "modal-content";
-
     var div4M = document.createElement("div");
     div4M.className = "modal-header";
-
     var h5M = document.createElement("h2");
     h5M.className = "modal-title";
     var tM = document.createTextNode(thisName);
-
     /*var buttonM = document.createElement("button");
     buttonM.className = "close";
     buttonM.setAttribute("type", "button");
     buttonM.setAttribute("data-dismiss", "modal");
     buttonM.setAttribute("aria-label", "Close"); */
-
     var iM = document.createElement("i");
     iM.className = "material-icons";
     var iMtext = document.createTextNode("x");
-
-//task list 
-    var div1Tasks = document.createElement("div");
-    div1Tasks.className = "task";
-
-    var div2Tasks = document.createElement("div");
-    div2Tasks.setAttribute("id", "myDIV");
-    div2Tasks.className = "header";
-
-    var h5Tasks = document.createElement("h5");
-    h5Tasks = document.createTextNode("Tasks to Complete");
-
-    var inputTasks = document.createElement("input");
-    inputTasks.setAttribute("type", "text");
-    inputTasks.setAttribute("id", "myInput");
-    inputTasks.setAttribute("placeholder", "Tasks...");
-
-    var spanTasks = document.createElement("span");
-    spanTasks.setAttribute("onclick", "newElement()");
-    spanTasks.className = "btn btn-primary btn-sm";
-    spanTasks = document.createTextNode("Add");
-
-    var ulTasks = document.createElement("ul");
-    ulTasks.setAttribute("id", "myUL"+i);
-
-
-    div2Tasks.appendChild(h5Tasks);
-    div2Tasks.appendChild(inputTasks);
-    div2Tasks.appendChild(spanTasks);
-
-    div1Tasks.appendChild(div2Tasks);
-    liM.appendChild(div1Tasks);
-//
     var div5M = document.createElement("div");
     div5M.className = "modal-body";
-
     var h3M = document.createElement("h3");
     var h3M = document.createTextNode(thisDesc);
-
     var div6M = document.createElement("div");
     div6M.className = "modal-footer"; 
-
     var buttonM = document.createElement("button");
     buttonM.setAttribute("type", "button");
-    buttonM.setAttribute("onclick", "deleteProject("+i+");");
     buttonM.className = "btn btn-link btn-success btn-danger";
-    buttonM.setAttribute("data-dismiss", "modal");
     var buttonMtext = document.createTextNode("Delete Project");
-
     var button2M = document.createElement("button");
     button2M.setAttribute("type", "button");
     button2M.setAttribute("onclick", "location.href='/add_entries'");
     button2M.className = "btn btn-link btn-success";
     var button2Mtext = document.createTextNode("Add Progress");
-
     var button3M = document.createElement("button");
     button3M.className = "btn btn-link";
     button3M.setAttribute("type", "button");
     button3M.setAttribute("data-dismiss", "modal");
-    button3M.setAttribute("onclick", "saveTasks("+i+");");
     var button3Mtext = document.createTextNode("Close");
-
-
 //title name, x
     /*iM.appendChild(iMtext);
     buttonM.appendChild(iM);*/
     h5M.appendChild(tM);
     div4M.appendChild(h5M);
     //div4M.appendChild(buttonM);
-
 //description
     div5M.appendChild(h3M);
-
 //Add Progress, close
     buttonM.appendChild(buttonMtext);
     button2M.appendChild(button2Mtext);
@@ -750,7 +470,6 @@ for (var i=0; i<projectsArray.length; i++){
     div6M.appendChild(buttonM);
     div6M.appendChild(button2M);
     div6M.appendChild(button3M);
-
 //combining all content
     div3M.appendChild(div4M);
     div3M.appendChild(div5M);
@@ -758,57 +477,55 @@ for (var i=0; i<projectsArray.length; i++){
     div2M.appendChild(div3M);
     div1M.appendChild(div2M);
     liM.appendChild(div1M);
-
     document.getElementById("modalList").appendChild(liM);
     console.log(document.getElementById("modalList").getElementsByTagName("li").length);
-
 }
-
-
-function deleteProject(p){
-
-if (p !== undefined){
-    projectsArray.splice(p,1);
-    formsArray.splice(p,1);
-    descArray.splice(p,1);
-    localStorage.setItem("projName", JSON.stringify(projectsArray));
-    localStorage.setItem("artForm", JSON.stringify(formsArray));
-    localStorage.setItem("description", JSON.stringify(descArray));
-
-    document.getElementById("projList").children[p+2].style.display = "none";
-
+function deleteProject(){
+var div1 = document.createElement("div");
+div1.className = "row";
+var div2 = document.createElement("div");
+div2.className = "col-lg-4 col-md-6";
+var button = document.createElement("button");
+button.className = "btn btn-block  btn-info";
+button.setAttribute("data-toggle", "modal");
+button.setAttribute("data-target", "#project"+i);
+var t = document.createTextNode(thisName);
+button.appendChild(t);
+div2.appendChild(button);
+div1.appendChild(div2);
+li.appendChild(div1);
+document.getElementById("projList").appendChild(li);
+var liM = document.createElement("li");
+var div1M = document.createElement("div");
+div1M.className = "modal fade";
+div1M.setAttribute = ("id", "project"+i);
+div1M.setAttribute = ("tabindex", "-1");
+div1M.setAttribute = ("role", "dialog");
+var div2M = document.createElement("div");
+div2M.className = "modal-dialog";
+div2M.setAttribute = ("role", "document");
     console.log("deleting..");
-
     //localStorage.removeItem();
-
     //var thisName = document.getElementById("projName").value;
 }
-}
-
-
-
-
 //this gets individual elements in the array
 //document.getElementById("result").innerHTML = projectsArray[0];
 //document.getElementById("result1").innerHTML = projectsArray[1];
-
-
     /*if (localStorage.projName){
         document.getElementById("result").innerHTML = localStorage.getItem("projName");
         document.getElementById("result1").innerHTML = localStorage.getItem("artForm");
         //document.getElementById("result2").innerHTML = localStorage.getItem("dueDate");
         document.getElementById("result3").innerHTML = localStorage.getItem("description");
         //document.getElementById("result4").innerHTML = localStorage.getItem("taskList");
-
     }*/
-
     var dt = new Date();
     document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
-
-
-
->>>>>>> 2f292d65c3e22da438799ce9733e9d0c331d63e7
 </script>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/components.js"></script>
+<script src="js/artistree.js"></script>
+</body>
 
 </html>
