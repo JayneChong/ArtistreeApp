@@ -4,38 +4,123 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTISTREE2</title>
+    <title>ARTISTREE</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/materials.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
 
-<body class="loginBody">
-    <center>
-     <div class="flex-wrap m-auto login-clean" style="height:auto;width:auto;">
-        <form method="post">
-            <h2 class="sr-only">Login</h2>
-            <h2 class="text-center" style="padding-bottom:-1px;margin-bottom:-23px;color:rgb(32,142,115);">ARTISTREE</h2>
+<body class="signup-page ">
+    <nav class="navbar  navbar-transparent    navbar-absolute  navbar-expand-lg " color-on-scroll="100" id="sectionsNav"> </nav>
 
-            <div class="illustration" style="margin:3px;padding-bottom:18px;padding-top:-3;margin-top:-9px;height:181px;"> <img src="/img/tree.png" style="width:100px;height:100px;"></div>
 
-            <div class="login-box">
-                <input id="email" class="form-control" type="email" name="email" placeholder="Email">
-                
-                <br>
 
-                <input id="password" class="form-control" type="password" name="password" placeholder="Password">
-                
-                <a id="login-btn" class="login-btn btn" role="button" style="background-color:rgb(71,244,140);" href="/home" >Log In</a>
-                <br> 
-                <a href="/register" class="forgot" style="font-size:17px;padding:5px;color:rgb(6,150,255);">Register</a> 
+
+    <div class="page-header header-filter" filter-color="white" style="background-image: url(&apos;../img/bg.jpg&apos;); background-size: cover; background-position: top center;">
+
+
+
+        <div class="container">
+
+            <h1 class="artistree-text text-center"> Artistree </h1> 
+            <h1 class="artistree-sub-text text-center"> Connect your multi-creative process under one tree </h1>
+
+            <br> 
+
+            <div class="row">
+
+                <div class="col-sm-6 ml-auto mr-auto">
+                    <div class="card card-signup">
+                        <!-- <h2 class="card-title text-center">Register</h2> -->
+                        <div class="card-body">
+                            <div class="row">
+
+                                <!-- SIDE INFO IF NEEDED -->
+                                <!-- <div class="col-md-5 ml-auto" style="display: none;">
+
+
+                               <div class="info info-horizontal">
+                                        <div class="icon icon-rose">
+                                            <i class="material-icons">add</i>
+                                        </div>
+                                        <div class="description">
+                                            <h5 class="info-title">Add your art and projects</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info info-horizontal">
+                                        <div class="icon icon-primary">
+                                            <i class="material-icons">description</i>
+                                        </div>
+                                        <div class="description">
+                                            <h5 class="info-title">Record your process</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info info-horizontal">
+                                        <div class="icon icon-info">
+                                            <i class="material-icons">timeline</i>
+                                        </div>
+                                        <div class="description">
+                                            <h5 class="info-title">Look back at your accomplishments</h5>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+
+                                <div class="col-sm-6 mr-auto ml-auto">
+
+                                    <form class="form" method="" action="">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">face</i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" style="display: none;">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">email</i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Email...">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">lock_outline</i>
+                                                </span>
+                                                <input type="password" placeholder="Password" class="form-control" />
+                                            </div>
+                                        </div>
+
+                                        <!-- LOGIN BUTTON -->
+                                        <div class="text-center">
+                                            <a href="/home" class="btn btn-primary btn-round">Log in</a>
+                                        </div>
+
+                                        <!-- REGISTER BUTTON -->
+                                        <div class="text-center">
+                                            <a href="/register" class="btn btn-primary btn-link btn-sm">Register</a>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/components.js"></script>
-    </center>
-</body>
 
-</html>
+    </body>
+
+
+    </html>
